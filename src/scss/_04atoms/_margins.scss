@@ -1,0 +1,99 @@
+$margin: 10;
+$type-margin: 0px;
+
+@while $margin < 100{
+    
+    .mg-#{$margin}{
+        margin: $type-margin + $margin;
+    }
+    .mgt-#{$margin}{
+        margin-top: $type-margin + $margin;
+    }
+    .mgr-#{$margin}{
+        margin-right: $type-margin + $margin;
+    }
+    .mgb-#{$margin}{
+        margin-bottom: $type-margin + $margin;
+    }
+    .mgl-#{$margin}{
+        margin-left: $type-margin + $margin;
+    }
+    $margin: $margin + 10;
+}
+
+@include breakpoints(medium){
+        $margin: 10;
+        $type-margin: 0px;
+
+        @while $margin < 100{
+            .mg-md-#{$margin}{
+                margin: $type-margin + $margin;
+            }
+            .mgt-md-#{$margin}{
+                margin-top: $type-margin + $margin;
+            }
+            .mgr-md-#{$margin}{
+                margin-right: $type-margin + $margin;
+            }
+            .mgb-md-#{$margin}{
+                margin-bottom: $type-margin + $margin;
+            }
+            .mgl-md-#{$margin}{
+                margin-left: $type-margin + $margin;
+            }
+
+            $margin: $margin + 10;
+        }
+}
+
+
+@include breakpoints(large){
+
+    $margin: 10;
+    $type-margin: 0px;
+
+    @while $margin < 100{
+
+        .mg-lg-#{$margin}{
+            margin: $type-margin + $margin;
+        }
+        .mgt-lg-#{$margin}{
+            margin-top: $type-margin + $margin;
+        }
+        .mgr-lg-#{$margin}{
+            margin-right: $type-margin + $margin;
+        }
+        .mgb-lg-#{$margin}{
+            margin-bottom: $type-margin + $margin;
+        }
+        .mgl-lg-#{$margin}{
+            margin-left: $type-margin + $margin;
+        }
+        $margin: $margin + 10;
+    }
+}
+
+
+@include breakpoints(xlarge){
+    $margin: 10;
+    $type-margin: 0px;
+
+    @while $margin < 100{
+        .mg-xl-#{$margin}{
+            margin: $type-margin + $margin;
+        }
+        .mgt-xl-#{$margin}{
+            margin-top: $type-margin + $margin;
+        }
+        .mgr-xl-#{$margin}{
+            margin-right: $type-margin + $margin;
+        }
+        .mgb-xl-#{$margin}{
+            margin-bottom: $type-margin + $margin;
+        }
+        .mgl-xl-#{$margin}{
+            margin-left: $type-margin + $margin;
+        }
+        $margin: $margin + 10;
+    }
+}

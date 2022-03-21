@@ -1,0 +1,99 @@
+$padding: 10;
+$type-padding: 0px;
+
+@while $padding < 100{
+    
+    .pd-#{$padding}{
+        padding: $type-padding + $padding;
+    }
+    .pdt-#{$padding}{
+        padding-top: $type-padding + $padding;
+    }
+    .pdr-#{$padding}{
+        padding-right: $type-padding + $padding;
+    }
+    .pdb-#{$padding}{
+        padding-bottom: $type-padding + $padding;
+    }
+    .pdl-#{$padding}{
+        padding-left: $type-padding + $padding;
+    }
+    $padding: $padding + 10;
+}
+
+@include breakpoints(medium){
+        $padding: 10;
+        $type-padding: 0px;
+
+        @while $padding < 100{
+            .pd-md-#{$padding}{
+                padding: $type-padding + $padding;
+            }
+            .pdt-md-#{$padding}{
+                padding-top: $type-padding + $padding;
+            }
+            .pdr-md-#{$padding}{
+                padding-right: $type-padding + $padding;
+            }
+            .pdb-md-#{$padding}{
+                padding-bottom: $type-padding + $padding;
+            }
+            .pdl-md-#{$padding}{
+                padding-left: $type-padding + $padding;
+            }
+
+            $padding: $padding + 10;
+        }
+}
+
+
+@include breakpoints(large){
+
+    $padding: 10;
+    $type-padding: 0px;
+
+    @while $padding < 100{
+
+        .pd-lg-#{$padding}{
+            padding: $type-padding + $padding;
+        }
+        .pdt-lg-#{$padding}{
+            padding-top: $type-padding + $padding;
+        }
+        .pdr-lg-#{$padding}{
+            padding-right: $type-padding + $padding;
+        }
+        .pdb-lg-#{$padding}{
+            padding-bottom: $type-padding + $padding;
+        }
+        .pdl-lg-#{$padding}{
+            padding-left: $type-padding + $padding;
+        }
+        $padding: $padding + 10;
+    }
+}
+
+
+@include breakpoints(xlarge){
+    $padding: 10;
+    $type-padding: 0px;
+
+    @while $padding < 100{
+        .pd-xl-#{$padding}{
+            padding: $type-padding + $padding;
+        }
+        .pdt-xl-#{$padding}{
+            padding-top: $type-padding + $padding;
+        }
+        .pdr-xl-#{$padding}{
+            padding-right: $type-padding + $padding;
+        }
+        .pdb-xl-#{$padding}{
+            padding-bottom: $type-padding + $padding;
+        }
+        .pdl-xl-#{$padding}{
+            padding-left: $type-padding + $padding;
+        }
+        $padding: $padding + 10;
+    }
+}

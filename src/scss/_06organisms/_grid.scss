@@ -1,0 +1,39 @@
+.grid-row{
+	@include grid-row;
+}
+
+
+@for $i from 1 through 12{
+	.grid-xs-#{$i}{
+		@include grid-column($i);
+	};
+}
+
+@include breakpoints(small){
+	@for $i from 1 through 12{
+		.grid-sm-#{$i}{
+			@include grid-column($i);
+		};
+	}
+}
+@include breakpoints(medium){
+	@for $i from 1 through 12{
+		.grid-md-#{$i}{
+			@include grid-column($i);
+		};
+	}
+}
+@include breakpoints(large){
+	@for $i from 1 through 12{
+		.grid-lg-#{$i}{
+			@include grid-column($i);
+		};
+	}
+}
+@include breakpoints(xlarge){
+	@for $i from 1 through 12{
+		.grid-xl-#{$i}{
+			@include grid-column($i);
+		};
+	}
+}

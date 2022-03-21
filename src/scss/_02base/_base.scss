@@ -1,0 +1,21 @@
+body{
+    font-size: $default-browser-font-size;
+    font-family: $OpenSans;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.w100{
+    width: 100%;
+}
+
+.w-content{
+    padding: 0px 20px;
+
+    @include breakpoints($wrapper-size + 40px){
+        width: $wrapper-size;
+        margin: 0 auto;
+    }
+}

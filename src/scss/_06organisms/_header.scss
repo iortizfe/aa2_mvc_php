@@ -1,0 +1,14 @@
+header{
+    @include clearfix;
+    padding: 10px 0px;
+    .logo{
+        width: 100%;
+        max-width: 200px;
+        @include inline-block;
+    }
+
+    .primary-menu{
+        @include inline-block;
+        float: right;
+    }
+}

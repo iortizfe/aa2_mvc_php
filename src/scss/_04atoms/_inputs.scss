@@ -1,0 +1,11 @@
+input{
+    width: 100%;
+    @include add-border(1px, $black, 'all');
+    border-radius: 3px;
+    padding: 5px;
+    @include text-format(16px, $OpenSans, $black);
+}
+
+input[type="submit"]{
+    width: auto;
+}
