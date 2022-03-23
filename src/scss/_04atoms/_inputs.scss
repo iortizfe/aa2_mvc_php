@@ -1,11 +1,74 @@
-input{
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+textarea{
     width: 100%;
-    @include add-border(1px, $black, 'all');
-    border-radius: 3px;
-    padding: 5px;
-    @include text-format(16px, $OpenSans, $black);
+    padding: 8px 10px 8px 10px;
+    border: 1px solid $grey;
+    border-radius: 5px;
+    font-family: $muli;
+    font-size: 14px;
+    background-color: $white;
+    color: $grey;
+
+    &::placeholder{
+        color: $grey;
+    }
 }
 
-input[type="submit"]{
-    width: auto;
+textarea{
+    resize: none;
+}
+
+
+.a-one-line-checkbox{
+    font-size: 14px;
+    color: $grey;
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        display: none;
+        padding: 0px;
+        
+        &:checked + span::before{
+          transform: scale(1);
+        }
+    
+        & + span{
+        width: 16px;
+        height: 16px;
+        border: 0px;
+        background: $white;
+        border-radius: 5px;
+        margin-right: 2px;
+        display: inline-block;
+        position: relative;
+        vertical-align: -2px;
+        cursor: pointer;
+    
+            &::before {
+                content: "\e900";
+                font-family: 'icomoon';
+                position: absolute;
+                font-size: 13px;
+                color: $primary-color;
+                top: 0%;
+                right: 0%;
+                transform: scale(0);
+                transition: all 0.3s ease;
+            }
+        }
+    }
+
+    a{
+        color: inherit;
+    }
+
+    .body{
+        display: inline-block;
+        width: calc(100% - 24px);
+        vertical-align: top;
+    }
 }

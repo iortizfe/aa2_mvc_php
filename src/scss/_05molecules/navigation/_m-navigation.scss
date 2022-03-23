@@ -1,0 +1,17 @@
+.menu-primary{
+    li{
+        a{
+            display: block;
+            padding: 10px;
+            color: $white;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+
+    @include breakpoints(768px){
+        ul{
+            display: flex;
+        }
+    }
+}

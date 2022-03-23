@@ -11,6 +11,7 @@
 // * Grid
 // * Video Responsive
 // * Gradient Over Image
+// * Hexadecimal Background to RGBA
 //
 
 @mixin clearfix {
@@ -162,9 +163,34 @@
   }
 }
 
-@mixin absolute-center{
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+// Hexadecimal Background to RGBA
+
+@mixin bghex-opacity($color, $opacity: 0.3) {
+  background: $color; /* The Fallback */
+  background: rgba($color, $opacity);
+}
+
+// Apply to all the classes than begins with the string
+@mixin all-class($class) {
+  [class^="#{$class}"], [class*=" #{$class}"] {
+    @content;
+  }
+}
+
+@mixin fullOutbox(){
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  max-width: 100vw;
+}
+
+@mixin icon(){
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

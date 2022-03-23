@@ -1,0 +1,63 @@
+.quehay-section{
+    padding: 60px 20px;
+    background-color: #f0f1f3;
+
+    @include breakpoints(768px){
+        padding: 120px 20px;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 30px;
+
+        @include breakpoints(768px){
+            margin-bottom: 40px;
+    }
+        img{
+            width: 100px;
+        }
+    }
+
+    .o-featured-module{
+        @include breakpoints(768px){
+            padding: 60px 20px;
+        }
+    }
+}
+
+.utilidad-section{
+    padding: 60px 0px;
+    background-color: #eaeef1;
+    @include breakpoints(768px){
+        padding: 120px 20px;
+    }
+
+    .p6-wrap{
+        @include breakpoints(768px){
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .image{
+
+            border-radius: 30px;
+            overflow: hidden;
+
+            @include breakpoints(768px){
+                width: 37%;
+            }
+        }
+
+        .content{
+            @include breakpoints(768px){
+                width: 57%;
+            }
+
+            h2{
+                margin: 20px 0px;
+            }
+        }
+    }
+
+}

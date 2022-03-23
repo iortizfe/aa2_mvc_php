@@ -1,28 +1,38 @@
 h1{
-    @include text-format(48px, $OpenSans, $primary-color);
+    @include text-format(48px, $muli, $black);
     line-height: rem-calc(57px);
+    font-weight: 900;
 }
 h2{
-    @include text-format(36px, $OpenSans, $primary-color);
-    line-height: rem-calc(46px); 
+    @include text-format(36px, $muli, $black);
+    line-height: rem-calc(46px);
+    font-weight: 900; 
 }
 h3{
-    @include text-format(21px, $OpenSans, $primary-color);
+    @include text-format(24px, $muli, $grey);
     line-height: rem-calc(36px);
+    font-weight: 900;
 }
 h4{
-    @include text-format(18px, $OpenSans, $grey);
+    @include text-format(18px, $muli, $grey);
     line-height: rem-calc(26px); 
+    font-weight: 600;
 }
 h5{
-    @include text-format(13px, $OpenSans, $grey);
+    @include text-format(13px, $muli, $grey);
     line-height: rem-calc(19px);  
+    font-weight: 600;
 }
 p{
-    @include text-format(16px, $OpenSans, $grey);
+    @include text-format(16px, $muli, $grey);
     line-height: rem-calc(20px);
+    font-weight: 400;
+}
+label{
+    @extend p;
 }
 a{
-    @include text-format(16px, $OpenSans, $primary-color);
+    @include text-format(16px, $muli, $primary-color);
     line-height: rem-calc(20px);  
+    font-weight: 400;
 }

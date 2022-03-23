@@ -31,6 +31,9 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1;
 }
+main{
+  display: block;
+}
 ol, ul {
   list-style: none;
 }
@@ -45,4 +48,13 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+button,
+[type="submit"]{
+  padding: 0;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  background: none
 }
