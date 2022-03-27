@@ -1,8 +1,8 @@
 <?php
     include './views/partials/header.php';
 ?>
-<section class="">
-  <div class="swiper-container o-swiper-home">
+<section class="o-swiper-home">
+  <div class="swiper-container">
     <div class="swiper-wrapper">     
       <div class="swiper-slide">
         <img class="a-object-cover" src="<?php echo URLROOT.'/src/img/slider/slider5.jpg' ?>" />
