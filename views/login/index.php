@@ -5,7 +5,7 @@
 	<div class="w-content">
 		<div class="m-form">
 		  <div class="form-content">
-			<h5 class="general-title">Accede al aula</h5>
+			<h2 class="general-title">Accede al aula</h2>
 			<form id="loginForm" name="loginForm" enctype="multipart/form-data">
 			  <div class="form-group">
 				<label for="login_username">Usuario</label>
@@ -21,7 +21,7 @@
 		  </div>
 		  <div class="card-footer text-muted">
 			<span>No tengo cuenta</span>
-			<a href="<?php echo URLROOT . '/register' ?>" class="btn btn-outline-secondary w-full">Registrarme</a>
+			<a href="<?php echo URLROOT . '/controllers/register.php' ?>" class="btn btn-outline-secondary w-full">Registrarme</a>
 		  </div>
 		</div>
 	</div>

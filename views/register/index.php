@@ -6,7 +6,7 @@
 	<div class="w-content">
 		<div class="m-form">
 		  <div class="form-content">
-			<h5 class="general-title">Registrate</h5>
+			<h2 class="general-title">Registrate</h2>
 			<form id="loginForm" name="loginForm" enctype="multipart/form-data">
 			  <div class="form-group">
 				<label for="login_username">Usuario</label>
@@ -37,12 +37,12 @@
 				<input id="login_nif" name="nif" type="text" class="form-control" placeholder="nif" required>
 			  </div>
 			  <div id="msg_error" class="form-errors"></div>
-			  <button id="login_submit" type="submit" class="button w-full">Acceder</button>
+			  <button id="login_submit" type="submit" class="button w-full">Registrate</button>
 			</form>
 		  </div>
 		  <div class="card-footer text-muted">
-			<span>No tengo cuenta</span>
-			<a href="<?php echo URLROOT . '/register' ?>" class="btn btn-outline-secondary w-full">Registrarme</a>
+			<span>Ya tengo cuenta</span>
+			<a href="<?php echo URLROOT . '/controllers/login.php' ?>" class="btn btn-outline-secondary w-full">Acceder</a>
 		  </div>
 		</div>
 	</main>
