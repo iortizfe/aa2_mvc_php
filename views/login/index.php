@@ -1,3 +1,6 @@
+<?php
+    include '../views/partials/header.php';
+?>
 <main class="o-register-page o-register-form">
 	<div class="w-content">
 		<div class="m-form">
@@ -21,5 +24,9 @@
 			<a href="<?php echo URLROOT . '/register' ?>" class="btn btn-outline-secondary w-full">Registrarme</a>
 		  </div>
 		</div>
-	</main>
-</div>
+	</div>
+</main>
+<?php
+    include '../views/partials/footer.php'
+?>
+

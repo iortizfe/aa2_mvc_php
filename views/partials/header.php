@@ -12,10 +12,10 @@
             <nav class="menu-primary">
                 <ul>
                     <li>
-                        <a href="login.php">login</a>
+                        <a href="<?php echo URLROOT.'/controllers/login.php' ?>">login</a>
                     </li>
                     <li>
-                        <a href="registro.php">Registrarse</a>
+                        <a href="<?php echo URLROOT.'/controllers/register.php' ?>">Registrarse</a>
                     </li>
                 </ul>
             </nav>
