@@ -16,7 +16,7 @@
 				<input id="login_password" name="password" type="password" class="form-control" placeholder="Contraseña" required>
 			  </div>
 			  <div id="msg_error" class="form-errors"></div>
-			  <button id="login_submit" type="submit" class="button w-full">Acceder</button>
+			  <button id="login_submit" type="submit" class="mgt-10 mgb-10 button w100">Acceder</button>
 			</form>
 		  </div>
 		  <div class="card-footer text-muted">

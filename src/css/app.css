@@ -65,6 +65,11 @@ button,
   background: none;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   font-size: 16px;
   font-family: "Mulish", sans-serif;
@@ -74,6 +79,11 @@ body {
   max-width: 1360px;
   padding: 0px 20px;
   margin: 0 auto;
+}
+
+main {
+  display: block;
+  min-height: calc(100vh - 90px);
 }
 
 .w-content {
@@ -137,9 +147,16 @@ p, label {
 a {
   font-size: 1rem;
   font-family: "Mulish", sans-serif;
-  color: #73cfc6;
+  color: #0561A0;
   line-height: 1.25rem;
   font-weight: 400;
+}
+
+.button {
+  background-color: #0561A0;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .a-object-cover {
@@ -237,7 +254,7 @@ textarea {
   font-family: "icomoon";
   position: absolute;
   font-size: 13px;
-  color: #73cfc6;
+  color: #0561A0;
   top: 0%;
   right: 0%;
   -webkit-transform: scale(0);

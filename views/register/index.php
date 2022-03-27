@@ -37,7 +37,7 @@
 				<input id="login_nif" name="nif" type="text" class="form-control" placeholder="nif" required>
 			  </div>
 			  <div id="msg_error" class="form-errors"></div>
-			  <button id="login_submit" type="submit" class="button w-full">Registrate</button>
+			  <button id="login_submit" type="submit" class="mgt-10 mgb-10 button w100">Registrate</button>
 			</form>
 		  </div>
 		  <div class="card-footer text-muted">
