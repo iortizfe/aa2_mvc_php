@@ -1,5 +1,5 @@
 <?php
-    include '../partials/header.php';
+    include './views/partials/header.php';
 ?>
 
 <main class="o-register-page o-register-form">
@@ -49,5 +49,5 @@
 </div>
 
 <?php
-    include '../partials/footer.php';
+    include './views/partials/footer.php';
 ?>
