@@ -25,7 +25,7 @@
   </div>
 </section>
 <section class="quehay-section">
-    <h1>¿Que es <img src="<?php echo URLROOT.'/src/img/logo.svg' ?>" /></h1>
+    <h1>¿Qué es <img src="<?php echo URLROOT.'/src/img/logo.svg' ?>" />?</h1>
     <div class="o-featured-module">
         <article class="m-featured-item">
             <div class="icon">
@@ -53,7 +53,7 @@
             <img class="a-object-cover" src="<?php echo URLROOT.'/src/img/home/estudiante1.jpg' ?>" />
         </div>
         <div class="content">
-            <h2>¿Como funciona?</h2>
+            <h2>¿Cómo funciona?</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam neque nunc, tempor in arcu ut, fermentum tempus lorem. Aenean eget ullamcorper tellus. Vivamus aliquet pellentesque justo nec bibendum. Integer auctor venenatis nisl, ut rutrum turpis consequat et. Proin ac egestas elit, mattis elementum nisi. Pellentesque quis nisl quam. In euismod lorem eu augue vulputate, eu vestibulum diam cursus. Cras volutpat ex quis euismod condimentum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi feugiat nunc ut iaculis auctor. Sed sem est, porta quis lectus fermentum, commodo egestas urna. Aenean dignissim, leo non efficitur egestas, velit nibh vulputate justo, a lacinia nulla elit ut nisl. Quisque eleifend tellus quis erat rutrum egestas.</p>
         </div>
     </div>

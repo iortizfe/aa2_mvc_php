@@ -1,7 +1,7 @@
     </main>
     <footer>
         <div class="p6-wrap">
-            ©<?php echo date("Y") ?> PhpSix
+            ©<?php echo date("Y") ?> mvc3
         </div>
     </footer>
     <script type="text/javascript" src="<?php echo URLROOT.'/src/js/jquery-3.3.1.min.js' ?>"></script>
