@@ -5,7 +5,7 @@
     $usernameClass = $nifClass = $telefonoClass = $emailClass = $nameClass = "";
 
     function checkForm($data){
-      $check = 0;
+      $check = 5;
       
       $nameRegexp = "/^[a-zA-ZñÑ ]*$/";
       $nifRegexp = "/^(\d{8}[a-zA-ZñÑ])$/";
@@ -17,8 +17,15 @@
       $check = checkDNI($check,$data['nif'],$nifRegexp);
       $check = checkField($check,$data['telephone'],$telefonoRegexp);
       $check = checkField($check,$data['email'],$emailRegexp);
-    
+      echo $check;
+
       if($check >= 1){
+        global $usernameComment;
+        global $nifComment;
+        global $telefonoComment;
+        global $emailComment;
+        global $nameComment;
+
         $usernameComment = checkFieldComment($data['username'],$nameRegexp);
         $nameComment = checkFieldComment($data['name'],$nameRegexp);
         $nifComment = checkDNIComment($data['nif'],$nifRegexp);
@@ -30,6 +37,7 @@
         $nifClass = checkDNIClass($data['nif'],$nifRegexp);
         $telefonoClass = checkFieldClass($data['telephone'],$telefonoRegexp);
         $emailClass = checkFieldClass($data['email'],$emailRegexp);
+
       }else{
           $db = new RegisterModel;
           $response = $db->register($data);
@@ -41,7 +49,7 @@
     
     function checkField($check,$value,$regex){  
         if(preg_match ($regex,$value)){
-            return $check+1;
+            return $check-1;
         }    
     }
 
@@ -67,7 +75,7 @@
             $letra = substr($value,strlen($value)-1,1);
             $letras = array("T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E");
             if($letra==$letras[$numero%23]){
-                return $check +  1;
+                return $check -  1;
             }   
         }
     }
@@ -110,5 +118,12 @@
             'telephone' => $_POST['telephone'],
             'email' => $_POST['email']
         );
+        var_dump($data);
         checkform($data);
+
+        echo $usernameComment;
+        echo $nameComment;
+        echo $nifComment;
+        echo $telefonoComment;
+        echo $emailComment;
     }
