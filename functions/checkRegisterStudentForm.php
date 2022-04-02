@@ -1,11 +1,11 @@
 
     <?php 
     
-    $usernameComment = $nifComment = $telefonoComment = $emailComment = $nameComment = "";
-    $usernameClass = $nifClass = $telefonoClass = $emailClass = $nameClass = "";
+    $usernameComment = $nifComment = $telefonoComment = $emailComment = $nameComment = $surnameComment = "";
+    $usernameClass = $nifClass = $telefonoClass = $emailClass = $nameClass = $surnameClass = "";
 
     function checkForm($data){
-      $check = 5;
+      $check = count($data);
       
       $nameRegexp = "/^[a-zA-ZñÑ ]*$/";
       $nifRegexp = "/^(\d{8}[a-zA-ZñÑ])$/";
@@ -13,6 +13,7 @@
       $emailRegexp = "/^[^\W][a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\@[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\.[a-zA-Z]{2,4}$/";
       
       $check = checkField($check,$data['username'],$nameRegexp);
+      $check = checkField($check,$data['surname'],$nameRegexp);
       $check = checkField($check,$data['name'],$nameRegexp);
       $check = checkDNI($check,$data['nif'],$nifRegexp);
       $check = checkField($check,$data['telephone'],$telefonoRegexp);
@@ -25,15 +26,18 @@
         global $telefonoComment;
         global $emailComment;
         global $nameComment;
+        global $surnameComment;
 
         $usernameComment = checkFieldComment($data['username'],$nameRegexp);
         $nameComment = checkFieldComment($data['name'],$nameRegexp);
+        $surnameComment = checkFieldComment($data['surname'],$nameRegexp);
         $nifComment = checkDNIComment($data['nif'],$nifRegexp);
         $telefonoComment = checkFieldComment($data['telephone'],$telefonoRegexp);
         $emailComment = checkFieldComment($data['email'],$emailRegexp);
   
         $usernameClass = checkFieldClass($data['username'],$nameRegexp);
         $nameClass = checkFieldClass($data['name'],$nameRegexp);
+        $surnameClass = checkFieldClass($data['surname'],$nameRegexp);
         $nifClass = checkDNIClass($data['nif'],$nifRegexp);
         $telefonoClass = checkFieldClass($data['telephone'],$telefonoRegexp);
         $emailClass = checkFieldClass($data['email'],$emailRegexp);
@@ -120,10 +124,4 @@
         );
         var_dump($data);
         checkform($data);
-
-        echo $usernameComment;
-        echo $nameComment;
-        echo $nifComment;
-        echo $telefonoComment;
-        echo $emailComment;
     }
