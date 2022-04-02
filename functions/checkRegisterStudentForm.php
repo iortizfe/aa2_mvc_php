@@ -117,15 +117,15 @@
         }   
     }
 
-    if(isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['username']) && isset($_POST['nif']) && isset($_POST['telephone']) && isset($_POST['email'])){
+    if(isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['username']) && isset($_POST['nif']) && isset($_POST['telephone']) && isset($_POST['email']) && isset($_POST['password'])){
         $data = array(
             'name' => $_POST['name'],
             'surname' => $_POST['surname'],
             'username' => $_POST['username'],
+            'password' => $_POST['password'],
             'nif' => $_POST['nif'],
             'telephone' => $_POST['telephone'],
             'email' => $_POST['email']
         );
-        var_dump($data);
         checkform($data);
     }

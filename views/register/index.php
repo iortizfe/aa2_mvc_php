@@ -29,6 +29,11 @@
 				<span class="error"><?php echo $nameComment;?></span>
 			  </div>
 			  <div class="form-group">
+				<label for="login_name">Apellido</label>
+				<input id="login_name" name="surname" type="text" class="form-control" placeholder="Apellido"  value="<?php if(isset($_POST['surname'])){echo $_POST['surname'];} ?>" required>
+				<span class="error"><?php echo $nameComment;?></span>
+			  </div>
+			  <div class="form-group">
 				<label for="login_telephone">Telefono</label>
 				<input id="login_telephone" name="telephone" type="phone" class="form-control" placeholder="Telefono"  value="<?php if(isset($_POST['telephone'])){echo $_POST['telephone'];} ?>" required>
 				<span class="error"><?php echo $telefonoComment;?></span>
