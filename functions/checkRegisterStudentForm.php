@@ -43,10 +43,13 @@
         $emailClass = checkFieldClass($data['email'],$emailRegexp);
 
       }else{
-          $db = new RegisterModel;
-          $response = $db->register($data);
+          $db = new RegisterModel($data);
+          $response = $db->register();
+          var_dump($response);
           if($response == true){
-              header('Location: '.APPURL.'/controllers/login');
+              header('Location: '.URLROOT.'/controllers/login');
+          }else{
+   
           }
       }
     }
@@ -114,9 +117,10 @@
         }   
     }
 
-    if(isset($_POST['name']) && isset($_POST['username']) && isset($_POST['nif']) && isset($_POST['telephone']) && isset($_POST['email'])){
+    if(isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['username']) && isset($_POST['nif']) && isset($_POST['telephone']) && isset($_POST['email'])){
         $data = array(
             'name' => $_POST['name'],
+            'surname' => $_POST['surname'],
             'username' => $_POST['username'],
             'nif' => $_POST['nif'],
             'telephone' => $_POST['telephone'],

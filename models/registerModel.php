@@ -7,12 +7,13 @@
     }
 
     public function register($data){
-      $this->db->query('INSERT INTO users (username,  pass, email, name, telephone, nif, date_registered) VALUES(:username, :pass, :email, :name, :telephone, :nif, :date_registered)');
+      $this->db->query('INSERT INTO students (username,  pass, email, name, telephone, nif, date_registered) VALUES(:username, :pass, :email, :name, :telephone, :nif, :date_registered)');
 
       $this->db->bind(':username', $data['username']);
-      $this->db->bind(':pass', $data['pass']);
+      $this->db->bind(':pass', $data['password']);
       $this->db->bind(':email', $data['email']);
       $this->db->bind(':name', $data['name']);
+      $this->db->bind(':surname', $data['surname']);
       $this->db->bind(':telephone', $data['telephone']);
       $this->db->bind(':nif', $data['nif']);
 	    $this->db->bind(':date_registered', $data['date_registered']);
