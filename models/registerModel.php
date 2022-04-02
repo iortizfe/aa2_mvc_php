@@ -1,5 +1,5 @@
 <?php
-  class registerModel {
+  class RegisterModel {
     private $db;
 
     public function __construct(){
