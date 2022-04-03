@@ -6,7 +6,7 @@
     $check;
     function checkForm($data){
       global $check;
-      $check = count($data);
+      $check = count($data) - 1;
       echo '(1)'.$check;
       $nameRegexp = "/^[a-zA-ZñÑ ]*$/";
       $nifRegexp = "/^(\d{8}[a-zA-ZñÑ])$/";
@@ -36,22 +36,20 @@
         $nifComment = checkDNIComment($data['nif'],$nifRegexp);
 
       }else{
-          echo 'todo ok';
-          echo '(3)'.$check;
-        //   $db = new RegisterModel($data);
-        //   $response = $db->register();
-        //   if($response == true){
-        //       header('Location: '.URLROOT.'/controllers/Login.php');
-        //   }else{
+          $db = new RegisterModel($data);
+          $response = $db->register();
+          if($response == true){
+              header('Location: '.URLROOT.'/controllers/Login.php');
+          }else{
    
-        //   }
+          }
       }
     }
 
     function checkField($value,$regex){  
         global $check;
         echo '(ii)'.$check;
-        return (!preg_match ($regex,$value)) ? $check - 1 : $check;
+        return (!preg_match ($regex,$value)) ? $check : $check - 1;
     }
 
     function checkFieldComment($value,$regex){
@@ -61,7 +59,7 @@
     function checkEmail($value){  
         global $check;
         echo '(iii)'.$check;
-        return (!filter_var($value, FILTER_VALIDATE_EMAIL)) ? $check - 1 : $check;
+        return (!filter_var($value, FILTER_VALIDATE_EMAIL)) ? $check : $check - 1;
     }
 
     function checkEmailComment($value){  
@@ -75,7 +73,8 @@
             $numero = substr($value,0,strlen($value)-1);
             $letra = substr($value,strlen($value)-1,1);
             $letras = array("T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E");
-            return ($letra==$letras[$numero%23]) ? $check -  1 : $check;
+            $value = ($letra==$letras[$numero%23]) ? $check - 1: $check;
+            return $value;
         }else{
             return $check - 1;
         }
