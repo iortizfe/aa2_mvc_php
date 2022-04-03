@@ -18,6 +18,10 @@
                         <li>
                             <a href="<?php echo URLROOT.'/controllers/register.php' ?>">Registrarse</a>
                         </li>
+                    <?php }else{ ?>
+                        <li>
+                            <a href="<?php echo URLROOT.'/libraries/Logout.php' ?>">Logout</a>
+                        </li>
                     <?php } ?>
                 </ul>
             </nav>
