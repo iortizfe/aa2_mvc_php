@@ -11,12 +11,14 @@
             </div>
             <nav class="menu-primary">
                 <ul>
-                    <li>
-                        <a href="<?php echo URLROOT.'/controllers/login.php' ?>">login</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo URLROOT.'/controllers/register.php' ?>">Registrarse</a>
-                    </li>
+                    <?php if(!isset($_SESSION['user'])){ ?>
+                        <li>
+                            <a href="<?php echo URLROOT.'/controllers/login.php' ?>">login</a>
+                        </li>
+                        <li>
+                            <a href="<?php echo URLROOT.'/controllers/register.php' ?>">Registrarse</a>
+                        </li>
+                    <?php } ?>
                 </ul>
             </nav>
         </div>

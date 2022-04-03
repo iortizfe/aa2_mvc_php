@@ -6,16 +6,16 @@
 		<div class="m-form">
 		  <div class="form-content">
 			<h2 class="general-title">Accede al aula</h2>
-			<form id="loginForm" name="loginForm" enctype="multipart/form-data">
+			<form id="loginForm" name="loginForm" enctype="multipart/form-data"  method="post" action="<?php echo URLROOT.'/controllers/Login.php'?>" >
 			  <div class="form-group">
-				<label for="login_username">Usuario</label>
-				<input id="login_username" name="username" type="text" class="form-control" placeholder="Nombre Usuario" required>
+				<label for="login_email">Email</label>
+				<input id="login_email" name="email" type="text" class="form-control" placeholder="Email" required>
 			  </div>
 			  <div class="form-group">
 				<label for="login_password">Contraseña</label>
 				<input id="login_password" name="password" type="password" class="form-control" placeholder="Contraseña" required>
 			  </div>
-			  <div id="msg_error" class="form-errors"></div>
+			  <div id="msg_error" class="form-errors"><?php echo $error; ?></div>
 			  <button id="login_submit" type="submit" class="mgt-10 mgb-10 button w100">Acceder</button>
 			</form>
 		  </div>

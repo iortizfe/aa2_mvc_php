@@ -11,7 +11,7 @@
         $this->db->query('INSERT INTO students (username,  pass, email, name, surname, telephone, nif, date_registered) VALUES(:username, :pass, :email, :name, :surname, :telephone, :nif, :date_registered)');
         var_dump($this->user);
         $this->db->bind(':username', $this->user->username );
-        $this->db->bind(':pass', $this->user->pass);
+        $this->db->bind(':pass', password_hash($this->user->pass, PASSWORD_DEFAULT));
         $this->db->bind(':email', $this->user->email);
         $this->db->bind(':name', $this->user->name);
         $this->db->bind(':surname', $this->user->surname);

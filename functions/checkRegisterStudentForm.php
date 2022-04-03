@@ -51,7 +51,6 @@
 
     function checkField($value,$regex){  
         global $check;
-        echo '(ii)'.$check;
         return (!preg_match ($regex,$value)) ? $check : $check - 1;
     }
 
@@ -61,7 +60,6 @@
 
     function checkEmail($value){  
         global $check;
-        echo '(iii)'.$check;
         return (!filter_var($value, FILTER_VALIDATE_EMAIL)) ? $check : $check - 1;
     }
 
@@ -71,7 +69,6 @@
 
     function checkDNI($value,$regex){
         global $check;
-        echo '(iv)'.$check;
         if(preg_match($regex,$value)){
             $numero = substr($value,0,strlen($value)-1);
             $letra = substr($value,strlen($value)-1,1);
