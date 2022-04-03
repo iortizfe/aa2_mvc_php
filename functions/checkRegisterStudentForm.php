@@ -43,7 +43,8 @@
                 header('Location: '.URLROOT.'/controllers/Login.php');
             }
           }else{
-              echo "El usuario existe";
+            global $emailComment;
+            $emailComment = "Ya estas registrado. Has utilizado anteriormente este email";
           }
       }
     }
