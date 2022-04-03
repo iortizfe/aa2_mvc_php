@@ -31,7 +31,7 @@
 			  <div class="form-group">
 				<label for="login_name">Apellido</label>
 				<input id="login_name" name="surname" type="text" class="form-control" placeholder="Apellido"  value="<?php if(isset($_POST['surname'])){echo $_POST['surname'];} ?>" required>
-				<span class="error"><?php echo $nameComment;?></span>
+				<span class="error"><?php echo $surnameComment;?></span>
 			  </div>
 			  <div class="form-group">
 				<label for="login_telephone">Telefono</label>
