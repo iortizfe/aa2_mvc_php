@@ -26,4 +26,15 @@
             $this->db->error();
         }
     }
+
+    public function userNotExist(){
+      $this->db->query("SELECT email FROM students where email= :email"); 
+      $this->db->bind(':email', $this->user->email);
+      // Execute
+      if($this->db->single()){
+        return false;
+      } else {
+        return true;
+      }
+  }
   }

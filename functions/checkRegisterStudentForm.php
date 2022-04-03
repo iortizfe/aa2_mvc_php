@@ -4,10 +4,11 @@
     $usernameComment = $nifComment = $telefonoComment = $emailComment = $nameComment = $surnameComment = "";
     $usernameClass = $nifClass = $telefonoClass = $emailClass = $nameClass = $surnameClass = "";
     $check;
+
     function checkForm($data){
       global $check;
       $check = count($data) - 1;
-      echo '(1)'.$check;
+
       $nameRegexp = "/^[a-zA-ZñÑ ]*$/";
       $nifRegexp = "/^(\d{8}[a-zA-ZñÑ])$/";
       $telefonoRegexp = "/^([679]{1}\d{8})$/";
@@ -18,7 +19,6 @@
       $check = checkField($data['surname'],$nameRegexp);
       $check = checkField($data['telephone'],$telefonoRegexp);
       $check = checkDNI($data['nif'],$nifRegexp);
-      echo '(2)'.$check;
 
       if($check >= 1){
         global $usernameComment;
@@ -37,11 +37,13 @@
 
       }else{
           $db = new RegisterModel($data);
-          $response = $db->register();
-          if($response == true){
-              header('Location: '.URLROOT.'/controllers/Login.php');
+          if($db->userNotExist()){
+            $response = $db->register();
+            if($response == true){
+                header('Location: '.URLROOT.'/controllers/Login.php');
+            }
           }else{
-   
+              echo "El usuario existe";
           }
       }
     }
