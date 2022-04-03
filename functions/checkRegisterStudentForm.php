@@ -3,10 +3,11 @@
     
     $usernameComment = $nifComment = $telefonoComment = $emailComment = $nameComment = $surnameComment = "";
     $usernameClass = $nifClass = $telefonoClass = $emailClass = $nameClass = $surnameClass = "";
-
+    $check;
     function checkForm($data){
+      global $check;
       $check = count($data);
-      
+      echo '(1)'.$check;
       $nameRegexp = "/^[a-zA-ZñÑ ]*$/";
       $nifRegexp = "/^(\d{8}[a-zA-ZñÑ])$/";
       $telefonoRegexp = "/^([679]{1}\d{8})$/";
@@ -18,7 +19,7 @@
       $check = checkDNI($check,$data['nif'],$nifRegexp);
       $check = checkField($check,$data['telephone'],$telefonoRegexp);
       $check = checkField($check,$data['email'],$emailRegexp);
-      echo $check;
+      echo '(2)'.$check;
 
       if($check >= 1){
         global $usernameComment;
@@ -43,21 +44,22 @@
         $emailClass = checkFieldClass($data['email'],$emailRegexp);
 
       }else{
-          $db = new RegisterModel($data);
-          $response = $db->register();
-          var_dump($response);
-          if($response == true){
-              header('Location: '.URLROOT.'/controllers/login');
-          }else{
+          echo 'todo ok';
+          echo '(3)'.$check;
+        //   $db = new RegisterModel($data);
+        //   $response = $db->register();
+        //   if($response == true){
+        //       header('Location: '.URLROOT.'/controllers/Login.php');
+        //   }else{
    
-          }
+        //   }
       }
     }
-    
+
     function checkField($check,$value,$regex){  
-        if(preg_match ($regex,$value)){
-            return $check-1;
-        }    
+        global $check;
+        echo '(ii)'.$check;
+        return (preg_match ($regex,$value)) ? $check - 1 : $check;
     }
 
     function checkFieldComment($value,$regex){
@@ -77,13 +79,13 @@
     }
 
     function checkDNI($check,$value,$regex){
+        global $check;
+        echo '(iii)'.$check;
         if(preg_match ($regex ,$value)){
             $numero = substr($value,0,strlen($value)-1);
             $letra = substr($value,strlen($value)-1,1);
             $letras = array("T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E");
-            if($letra==$letras[$numero%23]){
-                return $check -  1;
-            }   
+            return ($letra==$letras[$numero%23]) ? $check -  1 : $check;
         }
     }
 
@@ -116,7 +118,7 @@
             return 'incorrecto';
         }   
     }
-
+    
     if(isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['username']) && isset($_POST['nif']) && isset($_POST['telephone']) && isset($_POST['email']) && isset($_POST['password'])){
         $data = array(
             'name' => $_POST['name'],

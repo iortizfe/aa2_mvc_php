@@ -6,7 +6,7 @@ class User{
         $this->pass             = $data['password'];
         $this->email            = $data['email'];
         $this->name             = $data['name'];
-        $this->surname             = $data['surname'];
+        $this->surname          = $data['surname'];
         $this->telephone        = $data['telephone'];
         $this->nif              = $data['nif'];
 

@@ -9,7 +9,7 @@
 
     public function register(){
         $this->db->query('INSERT INTO students (username,  pass, email, name, surname, telephone, nif, date_registered) VALUES(:username, :pass, :email, :name, :surname, :telephone, :nif, :date_registered)');
-  
+        var_dump($this->user);
         $this->db->bind(':username', $this->user->username );
         $this->db->bind(':pass', $this->user->pass);
         $this->db->bind(':email', $this->user->email);
