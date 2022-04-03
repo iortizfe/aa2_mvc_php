@@ -1,8 +1,8 @@
 <?php
  session_start();
- $route_type = "public";
- include '../libraries/MiddlewareRoute.php';
+ $route_type = 'not-private';
  include '../config/config.php'; 
+ include '../libraries/MiddlewareRoute.php';
  include '../libraries/Database.php'; 
  include '../modules/UserClass.php'; 
  include '../models/registerModel.php'; 
