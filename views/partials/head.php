@@ -11,7 +11,7 @@
   <title>Aula MVC3</title>
   
   <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.css" rel="stylesheet" />
-  <link href="<?php echo URLROOT.'/src/css/app.css' ?>" rel="stylesheet" />
+  <link href="<?php echo URLROOT.'src/css/app.css' ?>" rel="stylesheet" />
 </head>
 
 <body class="app-bg">

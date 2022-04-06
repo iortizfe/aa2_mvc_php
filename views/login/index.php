@@ -6,7 +6,7 @@
 		<div class="m-form">
 		  <div class="form-content">
 			<h2 class="general-title">Accede al aula</h2>
-			<form id="loginForm" name="loginForm" enctype="multipart/form-data"  method="post" action="<?php echo URLROOT.'/controllers/Login.php'?>" >
+			<form id="loginForm" name="loginForm" enctype="multipart/form-data"  method="post" action="<?php echo URLROOT.'controllers/Login.php'?>" >
 			  <div class="form-group">
 				<label for="login_email">Email</label>
 				<input id="login_email" name="email" type="text" class="form-control" placeholder="Email" required>
@@ -21,7 +21,7 @@
 		  </div>
 		  <div class="card-footer text-muted">
 			<span>No tengo cuenta</span>
-			<a href="<?php echo URLROOT . '/controllers/register.php' ?>" class="btn btn-outline-secondary w-full">Registrarme</a>
+			<a href="<?php echo URLROOT . 'controllers/register.php' ?>" class="btn btn-outline-secondary w-full">Registrarme</a>
 		  </div>
 		</div>
 	</div>

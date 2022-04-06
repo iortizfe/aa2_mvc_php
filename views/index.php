@@ -5,16 +5,16 @@
   <div class="swiper-container">
     <div class="swiper-wrapper">     
       <div class="swiper-slide">
-        <img class="a-object-cover" src="<?php echo URLROOT.'/src/img/slider/slider5.jpg' ?>" />
+        <img class="a-object-cover" src="<?php echo URLROOT.'src/img/slider/slider5.jpg' ?>" />
       </div>
       <div class="swiper-slide">
-        <img class="a-object-cover" src="<?php echo URLROOT.'/src/img/slider/slider2.jpg' ?>" />
+        <img class="a-object-cover" src="<?php echo URLROOT.'src/img/slider/slider2.jpg' ?>" />
       </div>
       <div class="swiper-slide">
-        <img class="a-object-cover" src="<?php echo URLROOT.'/src/img/slider/slider3.jpg' ?>" />
+        <img class="a-object-cover" src="<?php echo URLROOT.'src/img/slider/slider3.jpg' ?>" />
       </div>
       <div class="swiper-slide">
-        <img class="a-object-cover" src="<?php echo URLROOT.'/src/img/slider/slider4.jpg' ?>" />
+        <img class="a-object-cover" src="<?php echo URLROOT.'src/img/slider/slider4.jpg' ?>" />
       </div>
  
     </div>
@@ -25,23 +25,23 @@
   </div>
 </section>
 <section class="quehay-section">
-    <h1>¿Qué es <img src="<?php echo URLROOT.'/src/img/logo.svg' ?>" />?</h1>
+    <h1>¿Qué es <img src="<?php echo URLROOT.'src/img/logo.svg' ?>" />?</h1>
     <div class="o-featured-module">
         <article class="m-featured-item">
             <div class="icon">
-                <img class="a-object-cover" src="<?php echo URLROOT.'/src/img/icons/aprender.svg'?>" />
+                <img class="a-object-cover" src="<?php echo URLROOT.'src/img/icons/aprender.svg'?>" />
             </div>
             <h5>Agrega tus clases</h5>
         </article>
         <article class="m-featured-item">
             <div class="icon">
-                <img class="a-object-cover" src="<?php echo URLROOT.'/src/img/icons/leccion-en-linea.svg' ?>"/>
+                <img class="a-object-cover" src="<?php echo URLROOT.'src/img/icons/leccion-en-linea.svg' ?>"/>
             </div>
             <h5>Permite que se apunten</h5>
         </article>
         <article class="m-featured-item">
             <div class="icon">
-                <img class="a-object-cover" src="<?php echo URLROOT.'/src/img/icons/crecimiento.svg' ?>"/>
+                <img class="a-object-cover" src="<?php echo URLROOT.'src/img/icons/crecimiento.svg' ?>"/>
             </div>
             <h5>Haz crecer tu aula</h5>
         </article>
@@ -50,7 +50,7 @@
 <section class="utilidad-section">
     <div class="p6-wrap">
         <div class="image">
-            <img class="a-object-cover" src="<?php echo URLROOT.'/src/img/home/estudiante1.jpg' ?>" />
+            <img class="a-object-cover" src="<?php echo URLROOT.'src/img/home/estudiante1.jpg' ?>" />
         </div>
         <div class="content">
             <h2>¿Cómo funciona?</h2>

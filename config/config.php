@@ -7,7 +7,7 @@
 	
   // VARIABLES ROOT 
   define('APPROOT', dirname( dirname(__FILE__)));
-  define('URLROOT', 'http://localhost/aa2_mvc_php');
+  define('URLROOT', 'http://localhost/aa2_mvc_php/');
 
   // VARIABLES NOMBRE
   define('APPNAME', 'AULA MVC3 P2');
