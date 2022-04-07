@@ -11,8 +11,8 @@
      $this->db->query('SELECT * FROM students WHERE email = :email');     
      $this->db->bind(':email', $email);
      $row = $this->db->single();
-     echo var_dump($row);
-     if(isset($row)){
+     if($row != ""){
+      //  echo var_dump($row);
        if(password_verify($password, $row->pass)){
         $_SESSION['user'] = $row->id; 
         $_SESSION['role'] = 'student';
@@ -24,10 +24,10 @@
         $this->db->query('SELECT * FROM users_admin WHERE email = :email');     
         $this->db->bind(':email', $email);
         $row = $this->db->single();
-        if(isset($row)){
+        if($row != ""){
           if(password_verify($password, $row->password)){
-            $_SESSION['user'] = $row->id; 
-            $_SESSION['role'] = 'student';
+            $_SESSION['user'] = $row->id_user; 
+            $_SESSION['role'] = 'admin';
             return true;
            }else{
             return true;

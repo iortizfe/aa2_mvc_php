@@ -1838,6 +1838,12 @@ header {
   font-style: italic;
 }
 
+.form-errors {
+  font-size: 0.8em;
+  color: darkred;
+  font-style: italic;
+}
+
 .o-featured-module {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -1,4 +1,4 @@
-s<body>
+<body>
     <header class="header-home">
         <div class="p6-wrap">
             <div class="logo">
