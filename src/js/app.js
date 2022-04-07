@@ -19,3 +19,14 @@ function swiperStart(){
         },
     });
 }
+
+(function(){
+    var menu = document.querySelector('.menu'),
+        btn = menu.querySelector('.menu-burguer');
+
+    btn.addEventListener('click', function(){
+        menu.classList.toggle('active');
+    });
+
+
+})();

@@ -3,7 +3,7 @@
   define('DB_HOST', 'localhost');
   define('DB_USER', 'root');
   define('DB_PASS', '');
-  define('DB_NAME', 'aula_mvc3');
+  define('DB_NAME', 'wordpress21');
 	
   // VARIABLES ROOT 
   define('APPROOT', dirname( dirname(__FILE__)));
