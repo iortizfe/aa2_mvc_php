@@ -1788,6 +1788,7 @@ header {
     top: 40px;
     right: 0;
     background-color: #000000;
+    z-index: 100;
   }
   .menu .menu-primary .has-dropdown .dropdown {
     display: none;

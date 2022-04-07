@@ -27,6 +27,22 @@
         }
     }
 
+    public function registerAdmin(){
+      $this->db->query('INSERT INTO users_admin (username,  password, email, name) VALUES(:username, :pass, :email, :name)');
+      var_dump($this->user);
+      $this->db->bind(':username', $this->user->username );
+      $this->db->bind(':pass', password_hash($this->user->pass, PASSWORD_DEFAULT));
+      $this->db->bind(':email', $this->user->email);
+      $this->db->bind(':name', $this->user->name);
+
+      // Execute
+      if($this->db->execute()){
+        return true;
+      } else {
+          $this->db->error();
+      }
+    }
+
     public function userNotExist(){
       $this->db->query("SELECT email FROM students where email= :email"); 
       $this->db->bind(':email', $this->user->email);
@@ -34,7 +50,14 @@
       if($this->db->single()){
         return false;
       } else {
-        return true;
+        $this->db->query("SELECT email FROM users_admin where email= :email"); 
+        $this->db->bind(':email', $this->user->email);
+        // Execute
+        if($this->db->single()){
+          return false;
+        } else {
+          return true;
+        }
       }
-  }
+    }
   }
