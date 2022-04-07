@@ -8,9 +8,9 @@ if(isset($_POST['email']) && isset($_POST['password'])){
     if($exist){ 
         if(isset($_SESSION['role'])){
             if($_SESSION['role'] == 'student'){
-                header('Location: '.URLROOT.'/');
+                header('Location: '.URLROOT.'');
             }else if($_SESSION['role'] == 'admin'){
-                header('Location: '.URLROOT.'/admin');         
+                header('Location: '.URLROOT.'admin');         
             }
         }else{
             global $error;
