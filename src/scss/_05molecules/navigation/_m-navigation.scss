@@ -63,7 +63,7 @@ header{
         }
 
         @include breakpoints(768px){
-            ul{
+            & > ul{
                 display: flex;
             }
 

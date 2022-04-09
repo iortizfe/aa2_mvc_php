@@ -53,7 +53,7 @@ class Database {
 		return $this->stmt->execute();
 	}
 	
-	public function resultset(){
+	public function all(){
 		$this->execute();
 		return $this->stmt->fetchAll(PDO::FETCH_OBJ);
 	}
@@ -70,8 +70,16 @@ class Database {
 	public function lastInsertId(){
 		return $this->dbh->lastInsertId();
 	}
+
 	public function error(){
 		return $this->dbh->error;
 	}
 
+	public function beginTransaction(){
+		return $this->dbh->beginTransaction();
+	}
+	
+	public function rollBack(){
+		return $this->dbh->rollBack();
+	}
 }

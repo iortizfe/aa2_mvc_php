@@ -1775,7 +1775,7 @@ header {
   text-transform: uppercase;
 }
 @media only screen and (min-width: 768px) {
-  .menu .menu-primary ul {
+  .menu .menu-primary > ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

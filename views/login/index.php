@@ -21,7 +21,7 @@
 		  </div>
 		  <div class="card-footer text-muted">
 			<span>No tengo cuenta</span>
-			<a href="<?php echo URLROOT . 'controllers/register.php' ?>" class="btn btn-outline-secondary w-full">Registrarme</a>
+			<a href="<?php echo URLROOT . 'controllers/register/' ?>" class="btn btn-outline-secondary w-full">Registrarme</a>
 		  </div>
 		</div>
 	</div>
