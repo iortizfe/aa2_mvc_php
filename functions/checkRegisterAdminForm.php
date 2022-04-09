@@ -30,10 +30,10 @@
 
       }else{
           $db = new RegisterModel($data);
-          if($db->adminNotExist()){
+          if($db->userNotExist()){
             $response = $db->registerAdmin();
             if($response == true){
-                header('Location: '.URLROOT.'controllers/Login.php');
+                header('Location: '.URLROOT.'controllers/login.php');
             }
           }else{
             global $emailComment;

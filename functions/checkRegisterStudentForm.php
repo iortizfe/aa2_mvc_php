@@ -40,7 +40,7 @@
           if($db->userNotExist()){
             $response = $db->register();
             if($response == true){
-                header('Location: '.URLROOT.'controllers/Login.php');
+                header('Location: '.URLROOT.'controllers/login.php');
             }
           }else{
             global $emailComment;
