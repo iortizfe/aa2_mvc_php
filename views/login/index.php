@@ -9,11 +9,11 @@
 			<form id="loginForm" name="loginForm" enctype="multipart/form-data"  method="post" action="<?php echo URLROOT.'controllers/login.php'?>" >
 			  <div class="form-group">
 				<label for="login_email">Email</label>
-				<input id="login_email" name="email" type="text" class="form-control" placeholder="Email" required>
+				<input id="login_email" name="email" type="text"  placeholder="Email" required>
 			  </div>
 			  <div class="form-group">
 				<label for="login_password">Contraseña</label>
-				<input id="login_password" name="password" type="password" class="form-control" placeholder="Contraseña" required>
+				<input id="login_password" name="password" type="password"  placeholder="Contraseña" required>
 			  </div>
 			  <div id="msg_error" class="form-errors"><?php echo $error; ?></div>
 			  <button id="login_submit" type="submit" class="mgt-10 mgb-10 button w100">Acceder</button>

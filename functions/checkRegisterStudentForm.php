@@ -9,7 +9,7 @@
       global $check;
       $check = count($data) - 1;
 
-      $nameRegexp = "/^[a-zA-ZñÑ ]*$/";
+      $nameRegexp = "/^[a-zA-Z áéíóúàèòïüÁÀÉÈÍÓÒÚçÇñÑ]+$/";
       $nifRegexp = "/^(\d{8}[a-zA-ZñÑ])$/";
       $telefonoRegexp = "/^([679]{1}\d{8})$/";
        

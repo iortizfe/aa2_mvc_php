@@ -40,3 +40,16 @@
             return "El valor es incorrecto";
         }   
     }
+
+    function checkMinDate($min_date, $max_date){
+        global $check;
+        $min = new DateTime($min_date);
+        $max = new DateTime($max_date);
+        return ($max < $min) ? $check : $check - 1;
+    }
+
+    function checkMinDateComment($min_date, $max_date){
+        $min = new DateTime($min_date);
+        $max = new DateTime($max_date);
+        return ($max < $min) ? "El valor es incorrecto" : "";
+    }

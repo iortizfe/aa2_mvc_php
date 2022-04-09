@@ -4,9 +4,9 @@
  include '../../../config/config.php'; 
  include '../../../libraries/MiddlewareRoute.php';
  include '../../../libraries/Database.php';  
- include '../../../class/ClassesClass.php'; 
- include '../../../models/asignaturasModel.php';  
+ include '../../../class/CourseClass.php'; 
+ include '../../../models/coursesModel.php';  
  include '../../../functions/checkFormHelperFunctions.php'; 
- include '../../../functions/checkRegisterAsignaturaForm.php'; 
+ include '../../../functions/checkRegisterCourseForm.php'; 
  include '../../../views/partials/head.php'; 
- include '../../../views/admin/asignaturas/index.php'; 
+ include '../../../views/admin/courses/index.php'; 

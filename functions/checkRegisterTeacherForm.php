@@ -1,15 +1,15 @@
 
     <?php 
     
-    $usernameComment = $nifComment = $telefonoComment = $emailComment = $nameComment = $surnameComment = "";
-    $usernameClass = $nifClass = $telefonoClass = $emailClass = $nameClass = $surnameClass = "";
+    $nifComment = $telefonoComment = $emailComment = $nameComment = $surnameComment = "";
+    $nifClass = $telefonoClass = $emailClass = $nameClass = $surnameClass = "";
     $check;
 
     function checkForm($data){
       global $check;
       $check = count($data);
 
-      $nameRegexp = "/^[a-zA-ZñÑ ]*$/";
+      $nameRegexp = "/^[a-zA-Z áéíóúàèòïüÁÀÉÈÍÓÒÚçÇñÑ]+$/";
       $nifRegexp = "/^(\d{8}[a-zA-ZñÑ])$/";
       $telefonoRegexp = "/^([679]{1}\d{8})$/";
        

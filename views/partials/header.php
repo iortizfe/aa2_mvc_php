@@ -27,7 +27,7 @@
                                 <span class="dropdown-button">Administracion</span>
                                 <ul class="dropdown">
                                     <li>
-                                        <a href="<?php echo URLROOT.'controllers/admin/asignaturas/' ?>">Asignaturas</a>
+                                        <a href="<?php echo URLROOT.'controllers/admin/courses/' ?>">Courses</a>
                                     </li>
                                     <li>
                                         <a href="<?php echo URLROOT.'controllers/admin/clases/' ?>">Clases</a>
