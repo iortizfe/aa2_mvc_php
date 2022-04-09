@@ -6,7 +6,7 @@
 		<div class="m-form">
 		  <div class="form-content">
 			<h2 class="general-title">Accede al aula</h2>
-			<form id="loginForm" name="loginForm" enctype="multipart/form-data"  method="post" action="<?php echo URLROOT.'controllers/Login.php'?>" >
+			<form id="loginForm" name="loginForm" enctype="multipart/form-data"  method="post" action="<?php echo URLROOT.'controllers/login.php'?>" >
 			  <div class="form-group">
 				<label for="login_email">Email</label>
 				<input id="login_email" name="email" type="text" class="form-control" placeholder="Email" required>

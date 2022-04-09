@@ -7,7 +7,7 @@
 		<div class="m-form">
 		  <div class="form-content">
 			<h2 class="general-title">Registro de administradores</h2>
-			<form id="loginForm" name="loginForm" enctype="multipart/form-data"  method="post" action="<?php echo URLROOT.'controllers/Register/admin.php'?>">
+			<form id="loginForm" name="loginForm" enctype="multipart/form-data"  method="post" action="<?php echo URLROOT.'controllers/register/admin.php'?>">
 			  <div class="form-group">
 				<label for="login_username">Usuario</label>
 				<input id="login_username" name="username" type="text" class="form-control" placeholder="Nombre Usuario" value="<?php if(isset($_POST['username'])){echo $_POST['username'];} ?>"   required>
