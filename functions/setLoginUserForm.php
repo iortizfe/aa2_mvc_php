@@ -1,6 +1,6 @@
 <?php
 
-$error = "Hola";
+$error = "";
 
 if(isset($_POST['email']) && isset($_POST['password'])){
     $db = new LoginModel();
