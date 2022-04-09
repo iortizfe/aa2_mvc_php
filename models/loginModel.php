@@ -26,7 +26,7 @@
         $row = $this->db->single();
         if($row != ""){
           if(password_verify($password, $row->password)){
-            $_SESSION['user'] = $row->id_user; 
+            $_SESSION['user'] = $row->id_user_admin; 
             $_SESSION['role'] = 'admin';
             return true;
            }else{

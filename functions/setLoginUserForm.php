@@ -10,7 +10,7 @@ if(isset($_POST['email']) && isset($_POST['password'])){
             if($_SESSION['role'] == 'student'){
                 header('Location: '.URLROOT.'');
             }else if($_SESSION['role'] == 'admin'){
-                header('Location: '.URLROOT.'admin');         
+                header('Location: '.URLROOT.'/controllers/admin');         
             }
         }else{
             global $error;
