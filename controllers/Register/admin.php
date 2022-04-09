@@ -6,6 +6,7 @@
  include '../../libraries/Database.php'; 
  include '../../class/UserClass.php'; 
  include '../../models/registerModel.php'; 
+ include '../../functions/checkFormHelperFunctions.php'; 
  include '../../functions/checkRegisterAdminForm.php'; 
  include '../../views/partials/head.php'; 
  include '../../views/register/admin.php'; 
