@@ -24,7 +24,7 @@
                             </li>
                         <?php } elseif($_SESSION['role'] == 'admin') { ?>
                             <li class="has-dropdown">
-                                <span class="dropdown-button">Administracion</span">
+                                <span class="dropdown-button">Administracion</span>
                                 <ul class="dropdown">
                                     <li>
                                         <a href="<?php echo URLROOT.'controllers/admin/asignaturas/' ?>">Asignaturas</a>
@@ -38,7 +38,7 @@
                                 </ul>                    
                             </li>
                             <li class="has-dropdown">
-                                <span class="dropdown-button">Mi perfil</span">
+                                <span class="dropdown-button">Mi perfil</span>
                                 <ul class="dropdown">
                                     <li>
                                         <a href="<?php echo URLROOT.'controllers/miperfil/' ?>">Modificar</a>
@@ -48,7 +48,7 @@
                             </li>
                         <?php } elseif($_SESSION['role'] == 'student') { ?>
                             <li class="has-dropdown">
-                                <span class="dropdown-button">Mi perfil</span">
+                                <span class="dropdown-button">Mi perfil</span>
                                 <ul class="dropdown">
                                     <li>
                                         <a href="<?php echo URLROOT.'controllers/miperfil/' ?>">Modificar</a>
