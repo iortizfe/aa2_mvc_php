@@ -9,6 +9,5 @@ class User{
         $this->surname          = $data['surname'];
         $this->telephone        = $data['telephone'];
         $this->nif              = $data['nif'];
-
     }
 }
