@@ -6,8 +6,8 @@
 	<div class="w-content">
 		<div class="m-form">
 		  <div class="form-content">
-			<h2 class="general-title">Registro de profesores</h2>
-			<form id="loginForm" name="loginForm" enctype="multipart/form-data"  method="post" action="<?php echo URLROOT.'controllers/admin/profesores/'?>">
+			<h2 class="general-title">Registro de teachers</h2>
+			<form id="loginForm" name="loginForm" enctype="multipart/form-data"  method="post" action="<?php echo URLROOT.'controllers/admin/teachers/'?>">
 			<div class="grid-row">
 				<div class="grid-md-6">
 					<div class="form-group pd-10">

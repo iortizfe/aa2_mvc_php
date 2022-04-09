@@ -4,7 +4,7 @@
 
     public function __construct($data){
       $this->db = new Database;
-      $this->course = new Course($data);
+      $this->course = ($data != null) ?  new Course($data) : "";
     }
 
     public function register(){
@@ -23,7 +23,6 @@
         }
     }
 
-
   //   public function courseNotExist(){
   //     $this->db->query("SELECT name FROM courses where name= :name"); 
   //     $this->db->bind(':email', $this->user->email);
@@ -34,4 +33,24 @@
   //         return true;
   //     }
   // }
+
+  public function getAll(){
+    $this->db->query("SELECT * FROM courses ORDER BY name ASC");
+    // Execute
+    if($this->db->execute()){
+      return $this->db->all();
+    } else {
+        $this->db->error();
+    }
+  }
+
+  public function getCourseDatesById($id){
+    $this->db->query("SELECT date_start, date_end FROM courses WHERE id_course = $id");
+    // Execute
+    if($this->db->execute()){
+      return $this->db->single();
+    } else {
+        $this->db->error();
+    }
+  }
 }

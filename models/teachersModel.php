@@ -4,7 +4,7 @@
 
     public function __construct($data){
       $this->db = new Database;
-      $this->user = new Teacher($data);
+      $this->user = ($data != null) ?  new Teacher($data) : "";
     }
 
     public function register(){
@@ -32,5 +32,15 @@
         } else {
             return true;
         }
+    }
+
+    public function getAll(){
+      $this->db->query("SELECT * FROM teachers ORDER BY name ASC, surname ASC");
+      // Execute
+      if($this->db->execute()){
+        return $this->db->all();
+      } else {
+          $this->db->error();
+      }
     }
 }

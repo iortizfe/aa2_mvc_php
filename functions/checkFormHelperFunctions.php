@@ -53,3 +53,18 @@
         $max = new DateTime($max_date);
         return ($max < $min) ? "El valor es incorrecto" : "";
     }
+
+    function checkBetweenDate($min_date, $max_date, $now_date){
+        global $check;
+        $min = new DateTime($min_date);
+        $max = new DateTime($max_date);
+        $now = new DateTime($now_date);
+        return ($now < $min || $max < $now) ? $check : $check - 1;
+    }
+
+    function checkBetweenDateComment($min_date, $max_date, $now_date){
+        $min = new DateTime($min_date);
+        $max = new DateTime($max_date);
+        $now = new DateTime($now_date);
+        return ($now < $min || $max < $now) ? "El valor esta fuera de rango de la clase ha de estar entre ".$min_date." y ".$max_date  : "";
+    }

@@ -6,4 +6,4 @@
  include '../../../libraries/Database.php';  
 
  include '../../../views/partials/head.php'; 
- include '../../../views/admin/profesores/modificar.php'; 
+ include '../../../views/admin/teachers/modificar.php'; 

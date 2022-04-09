@@ -33,7 +33,7 @@
                                         <a href="<?php echo URLROOT.'controllers/admin/clases/' ?>">Clases</a>
                                     </li>
                                     <li>
-                                        <a href="<?php echo URLROOT.'controllers/admin/profesores/' ?>">Profesores</a>
+                                        <a href="<?php echo URLROOT.'controllers/admin/teachers/' ?>">teachers</a>
                                     </li>
                                 </ul>                    
                             </li>
