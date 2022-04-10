@@ -6,7 +6,7 @@
 		<div class="m-form">
 		  <div class="form-content">
 			<h2 class="general-title">Registro de clases</h2>
-			<form id="loginForm" name="loginForm" enctype="multipart/form-data"  method="post" action="<?php echo URLROOT.'controllers/admin/clases/'?>">
+			<form id="loginForm" name="loginForm" enctype="multipart/form-data"  method="post" action="<?php echo URLROOT.'controllers/admin/clases/insertar.php'?>">
 			<div class="grid-row">
                 <div class="grid-md-6">
 			  		<div class="form-group pd-10">

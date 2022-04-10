@@ -9,4 +9,4 @@
  include '../../../functions/checkFormHelperFunctions.php'; 
  include '../../../functions/checkUpdateTeacherForm.php';
  include '../../../views/partials/head.php'; 
- include '../../../views/admin/teachers/index.php'; 
+ include '../../../views/admin/teachers/modificar.php'; 

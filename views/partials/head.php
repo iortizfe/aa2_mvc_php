@@ -11,6 +11,10 @@
   <title>Aula MVC3</title>
   
   <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" rel="stylesheet" />
+  <?php if(isset($_SESSION['role']) && $_SESSION['role'] == 'admin'){ ?>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.11.5/datatables.min.css"/>
+  <?php }; ?>
   <link href="<?php echo URLROOT.'src/css/app.css' ?>" rel="stylesheet" />
 </head>
 

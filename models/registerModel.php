@@ -63,7 +63,6 @@
 
     public function update(){
       try{
-        echo intval($_SESSION['user']);
         $this->db->query('UPDATE students SET username=:username, pass=:pass, email=:email, name=:name, surname=:surname, telephone=:telephone, nif=:nif WHERE id=:id');
         $this->db->bind(':id', intval($_SESSION['user']));
         $this->db->bind(':username', $this->user->username);

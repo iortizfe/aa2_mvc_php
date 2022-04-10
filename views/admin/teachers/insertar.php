@@ -7,7 +7,7 @@
 		<div class="m-form">
 		  <div class="form-content">
 			<h2 class="general-title">Registro de teachers</h2>
-			<form id="loginForm" name="loginForm" enctype="multipart/form-data"  method="post" action="<?php echo URLROOT.'controllers/admin/teachers/'?>">
+			<form id="loginForm" name="loginForm" enctype="multipart/form-data"  method="post" action="<?php echo URLROOT.'controllers/admin/teachers/insertar.php'?>">
 			<div class="grid-row">
 				<div class="grid-md-6">
 					<div class="form-group pd-10">
@@ -50,8 +50,9 @@
 			</form>
 		  </div>
 		</div>
-	</main>
-</div>
+	</div>
+</main>
+
 
 
 <?php

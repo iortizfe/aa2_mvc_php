@@ -55,7 +55,7 @@
 					</div>
 				</div>
 			  <div id="msg_error" class="form-errors"></div>
-			  <button id="login_submit" type="submit" class="mgt-10 mgb-10 button w100">Registrate</button>
+			  <button id="login_submit" type="submit" class="mgt-10 mgb-10 button w100">Modificar</button>
 			</form>
 		  </div>
 		</div>
