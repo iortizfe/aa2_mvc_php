@@ -46,6 +46,7 @@
           $db = new LoginModel();
           $user = $db->getMe();
           $success = "Perfil actualizado con exito";
+          unset($_POST);
         }
       }
     }

@@ -47,7 +47,6 @@
         $newPasswordComment = checkEqualComment($data['newpassword1'], $data['newpassword2']);
       }else{
         $data['password'] = $data['newpassword1'];
-        echo var_dump($data);
         
         $db2 = new RegisterModel($data);
  
@@ -58,6 +57,7 @@
           $db = new LoginModel();
           $user = $db->getMe();
           $success = "Perfil actualizado con exito";
+          unset($_POST);
         }
       }
     }
