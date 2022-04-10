@@ -96,6 +96,14 @@ main {
   width: 100%;
 }
 
+.tcenter {
+  text-align: center;
+}
+
+.success {
+  color: darkcyan;
+}
+
 h1 {
   font-size: 3rem;
   font-family: "Mulish", sans-serif;

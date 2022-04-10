@@ -6,8 +6,8 @@
 	<div class="w-content">
 		<div class="m-form">
 		  <div class="form-content">
-			<h2 class="general-title">Cambia la información de tu perfil</h2>
-			<h4 class="success"> <?php echo $success; ?></h4>
+			<h2 class="general-title tcenter">Cambia la información de tu perfil</h2>
+			<h4 class="success tcenter"> <?php echo $success; ?></h4>
 			<form id="loginForm" name="loginForm" enctype="multipart/form-data"  method="post" action="<?php echo URLROOT.'controllers/miperfil/'?>">
 			<div class="grid-row">
 				<div class="grid-md-6">
@@ -83,10 +83,6 @@
 			  <div id="msg_error" class="form-errors"></div>
 			  <button id="login_submit" type="submit" class="mgt-10 mgb-10 button w100">Registrate</button>
 			</form>
-		  </div>
-		  <div class="card-footer text-muted">
-			<span>Ya tengo cuenta</span>
-			<a href="<?php echo URLROOT . 'controllers/login.php' ?>" class="btn btn-outline-secondary w-full">Acceder</a>
 		  </div>
 		</div>
 	</main>

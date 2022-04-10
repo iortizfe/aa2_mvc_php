@@ -6,7 +6,7 @@
 	<div class="w-content">
 		<div class="m-form">
 		  <div class="form-content">
-			<h2 class="general-title">Registrate</h2>
+			<h2 class="general-title tcenter">Registrate</h2>
 			<form id="loginForm" name="loginForm" enctype="multipart/form-data"  method="post" action="<?php echo URLROOT.'controllers/register/'?>">
 			<div class="grid-row">
 				<div class="grid-md-6">

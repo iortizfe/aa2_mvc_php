@@ -6,7 +6,7 @@
 	<div class="w-content">
 		<div class="m-form">
 		  <div class="form-content">
-			<h2 class="general-title">Registro de administradores</h2>
+			<h2 class="general-title tcenter">Registro de administradores</h2>
 			<form id="loginForm" name="loginForm" enctype="multipart/form-data"  method="post" action="<?php echo URLROOT.'controllers/register/admin.php'?>">
 			<div class="grid-row">
 				<div class="grid-md-6">  
