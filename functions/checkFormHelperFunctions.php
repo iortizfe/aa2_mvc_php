@@ -8,6 +8,15 @@
         return (!preg_match ($regex,$value)) ? "El valor es incorrecto" : "";
     }
 
+    function checkEqual($value1, $value2){
+        global $check;
+        return ($value1 !=  $value2) ? $check : $check - 1;
+    }
+
+    function checkEqualComment($value1,$value2){
+        return ($value1 !=  $value2) ? "Los valores no coinciden" : "";
+    }
+
     function checkEmail($value){  
         global $check;
         return (!filter_var($value, FILTER_VALIDATE_EMAIL)) ? $check : $check - 1;
@@ -15,6 +24,15 @@
 
     function checkEmailComment($value){  
         return (!filter_var($value, FILTER_VALIDATE_EMAIL)) ? "El valor es incorrecto" : "";
+    }
+
+    function checkUserPassword($insertedPass, $storedPass){
+        global $check;
+        return (!password_verify($insertedPass, $storedPass)) ? $check : $check - 1;
+    }
+
+    function checkUserPasswordComment($insertedPass, $storedPass){
+        return (!password_verify($insertedPass, $storedPass)) ? "Este no es tu password actual" : "";
     }
 
     function checkDNI($value,$regex){

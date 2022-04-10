@@ -37,4 +37,16 @@
         }
      }
     }
+
+    public function getMe(){
+      if($_SESSION['role']=='admin'){
+        $this->db->query('SELECT * FROM users_admin WHERE id_user_admin = :id');     
+        $this->db->bind(':id', $_SESSION['user']);
+        return $this->db->single();
+      }elseif($_SESSION['role']=='student'){
+        $this->db->query('SELECT * FROM students WHERE id = :id');     
+        $this->db->bind(':id', $_SESSION['user']);
+        return $this->db->single();
+      }
+    }
   }

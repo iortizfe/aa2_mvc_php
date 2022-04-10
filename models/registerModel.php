@@ -60,4 +60,51 @@
         }
       }
     }
+
+    public function update(){
+      try{
+        echo intval($_SESSION['user']);
+        $this->db->query('UPDATE students SET username=:username, pass=:pass, email=:email, name=:name, surname=:surname, telephone=:telephone, nif=:nif WHERE id=:id');
+        $this->db->bind(':id', intval($_SESSION['user']));
+        $this->db->bind(':username', $this->user->username);
+        $this->db->bind(':pass', password_hash($this->user->pass, PASSWORD_DEFAULT));
+        $this->db->bind(':email', $this->user->email);
+        $this->db->bind(':name', $this->user->name);
+        $this->db->bind(':surname', $this->user->surname);
+        $this->db->bind(':telephone', $this->user->telephone);
+        $this->db->bind(':nif', $this->user->nif);
+  
+        // Execute
+        if($this->db->execute()){
+          return true;
+        } else {
+            $this->db->error();
+        }
+      }catch(Exception $e){
+        echo $e->getMessage();
+      }
+      
+    }
+
+    public function updateAdmin(){
+      try{
+        echo intval($_SESSION['user']);
+        $this->db->query('UPDATE users_admin SET username=:username, password=:pass, email=:email, name=:name WHERE id_user_admin=:id');
+        $this->db->bind(':id', intval($_SESSION['user']));
+        $this->db->bind(':username', $this->user->username);
+        $this->db->bind(':pass', password_hash($this->user->pass, PASSWORD_DEFAULT));
+        $this->db->bind(':email', $this->user->email);
+        $this->db->bind(':name', $this->user->name);
+  
+        // Execute
+        if($this->db->execute()){
+          return true;
+        } else {
+            $this->db->error();
+        }
+      }catch(Exception $e){
+        echo $e->getMessage();
+      }
+      
+    }
   }
