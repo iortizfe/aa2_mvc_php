@@ -9,9 +9,9 @@
  include '../../models/registerModel.php'; 
  include '../../functions/checkFormHelperFunctions.php'; 
  if(isset($_SESSION['role']) && $_SESSION['role']=="student"){
-    include '../../functions/checkUpdateStudentForm.php'; 
-    include '../../views/partials/head.php'; 
-    include '../../views/miperfil/index.php'; 
+   include '../../functions/checkUpdateStudentForm.php'; 
+   include '../../views/partials/head.php'; 
+   include '../../views/miperfil/index.php'; 
  }else if(isset($_SESSION['role']) && $_SESSION['role']=="admin"){
    include '../../functions/checkUpdateAdminForm.php'; 
    include '../../views/partials/head.php'; 

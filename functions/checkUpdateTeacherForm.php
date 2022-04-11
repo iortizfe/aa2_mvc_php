@@ -10,7 +10,9 @@
     if(isset($_GET['id'])){
       $db = new TeacherModel(null);
       $teacher = $db->getTeacherByID($_GET['id']);
-  };
+    }else{
+      header('Location: '.URLROOT.'controllers/admin/teachers/');
+    };
 
     function checkForm($data){
       global $check;
@@ -42,7 +44,7 @@
 
       }else{
           $db = new TeacherModel($data);
-          $response = $db->update();
+          $response = $db->update($data['id']);
           if($response == true){
             global $success;
             $success = "Perfil actualizado con exito";

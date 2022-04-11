@@ -23,16 +23,44 @@
         }
     }
 
-  //   public function courseNotExist(){
-  //     $this->db->query("SELECT name FROM courses where name= :name"); 
-  //     $this->db->bind(':email', $this->user->email);
-  //     // Execute
-  //     if($this->db->single()){
-  //         return false;
-  //     } else {
-  //         return true;
-  //     }
-  // }
+    public function update($id){
+      $this->db->query('UPDATE courses SET name=:name, description=:description, date_start=:date_start, date_end=:date_end, active=:active WHERE id_course=:id');
+      $this->db->bind(':id', $id);
+      $this->db->bind(':name', $this->course->name);
+      $this->db->bind(':description', $this->course->description);
+      $this->db->bind(':date_start', date("Y-m-d", strtotime($this->course->date_start)));
+      $this->db->bind(':date_end', date("Y-m-d", strtotime($this->course->date_end)));
+      $this->db->bind(':active', $this->course->active);
+
+      // Execute
+      if($this->db->execute()){
+        return true;
+      } else {
+        return $this->db->error();
+      }
+    }
+
+    public function delete($id){
+      $this->db->query("DELETE FROM courses WHERE id_course=:id");
+      $this->db->bind(':id', $id);
+      if($this->db->execute()){
+          return true;
+      } else {
+          return false;
+      }
+    }
+
+
+    public function getCourseByID($id){
+      $this->db->query("SELECT * FROM courses WHERE id_course=:id");
+      $this->db->bind(':id', $id);
+      $teacher = $this->db->single();
+      if($teacher){
+          return $teacher;
+      } else {
+          return false;
+      }
+    }
 
   public function getAll(){
     $this->db->query("SELECT * FROM courses ORDER BY name ASC");

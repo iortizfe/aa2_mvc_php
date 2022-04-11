@@ -34,9 +34,9 @@
         }
     }
 
-    public function update(){
+    public function update($id){
       $this->db->query('UPDATE teachers SET email=:email, name=:name, surname=:surname, telephone=:telephone, nif=:nif WHERE id_teacher=:id');
-      $this->db->bind(':id', $this->user->id);
+      $this->db->bind(':id', $id);
       $this->db->bind(':email', $this->user->email);
       $this->db->bind(':name', $this->user->name);
       $this->db->bind(':surname', $this->user->surname);
