@@ -9,7 +9,7 @@
  include '../../../models/coursesModel.php';
  include '../../../models/clasesModel.php'; 
  include '../../../functions/getAllListTeachers.php';
- include '../../../functions/getAllListClases.php';  
+ include '../../../functions/getAllListCourses.php';  
  include '../../../functions/checkFormHelperFunctions.php'; 
  include '../../../functions/checkRegisterClasesForm.php'; 
  include '../../../views/partials/head.php'; 
