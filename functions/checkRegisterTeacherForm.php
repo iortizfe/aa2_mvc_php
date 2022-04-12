@@ -38,7 +38,7 @@
           if($db->teacherNotExist()){
             $response = $db->register();
             if($response == true){
-                header('Location: '.URLROOT.'controllers/login.php');
+                header('Location: '.URLROOT.'controllers/admin/teachers/');
             }
           }else{
             global $emailComment;

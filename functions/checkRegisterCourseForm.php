@@ -26,7 +26,7 @@
             if($response == true){
                 unset($_POST);
                 $_POST = array();
-                header('Location: '.URLROOT.'controllers/login.php');
+                header('Location: '.URLROOT.'controllers/admin/courses/');
             }
           // }else{
           //   global $emailComment;
