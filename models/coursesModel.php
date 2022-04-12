@@ -62,6 +62,22 @@
       }
     }
 
+    public function getAllCoursesByStudentID($id){
+      $this->db->query("SELECT * 
+                        FROM courses 
+                        FULL JOIN enrollment
+                        ON courses.id_course=enrollment.id_course
+                        WHERE enrollment.id_student=:id
+                        GROUP BY courses.id_course");
+      $this->db->bind(':id', $id);
+      $courses = $this->db->all();
+      if($courses){
+          return $courses;
+      } else {
+          return false;
+      }
+    }
+
   public function getAll(){
     $this->db->query("SELECT * FROM courses ORDER BY name ASC");
     // Execute
