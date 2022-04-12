@@ -16,10 +16,11 @@
 					<thead>
 						<tr>
 							<th>Nombre</th>
+							<th>Profesor</th>
 							<th>Fecha</th>
 							<th>Hora Inicio</th>
 							<th>Hora Fin</th>
-							<th>Profesor</th>
+
 						</tr>
 					</thead>
 					<tbody>
@@ -42,10 +43,10 @@
 					<tfoot>
 						<tr>
 							<th>Nombre</th>
+							<th>Profesor</th>
 							<th>Fecha</th>
 							<th>Hora Inicio</th>
 							<th>Hora Fin</th>
-							<th>Profesor</th>
 						</tr>
 					</tfoot>
 				</table>
