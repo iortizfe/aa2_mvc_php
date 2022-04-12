@@ -24,7 +24,7 @@
                             </li>
                         <?php } elseif($_SESSION['role'] == 'admin') { ?>
                             <li class="has-dropdown">
-                                <span class="dropdown-button">Administracion</span>
+                                <a class="dropdown-button" href="<?php echo URLROOT.'controllers/admin/' ?>">Administracion</a>
                                 <ul class="dropdown">
                                     <li>
                                         <a href="<?php echo URLROOT.'controllers/admin/courses/' ?>">Courses</a>
