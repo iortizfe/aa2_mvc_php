@@ -8,8 +8,6 @@
  include '../../../models/teachersModel.php';  
  include '../../../models/coursesModel.php';
  include '../../../models/clasesModel.php'; 
- include '../../../functions/getAllListClases.php';  
- include '../../../functions/checkFormHelperFunctions.php'; 
- include '../../../functions/checkRegisterClasesForm.php'; 
+ include '../../../functions/getAllListClases.php';   
  include '../../../views/partials/head.php'; 
  include '../../../views/admin/clases/index.php'; 
