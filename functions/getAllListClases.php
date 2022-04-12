@@ -1,5 +1,5 @@
 <?php
-    $db_courses = new ClasesModel(null);
-    $courses = $db_courses->getAll();
+    $db_clases = new ClasesModel(null);
+    $clases = $db_clases->getAll();
 
     

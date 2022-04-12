@@ -28,13 +28,13 @@
             <div class="grid-row">
                 <div class="grid-md-6">
 			  		<div class="form-group pd-10">
-						<label for="class_date_start">Nombre</label>
+						<label for="class_date_start">Fecha Inicio</label>
 						<input id="class_date_start" name="date_start" type="date"  placeholder="Fecha de Inicio"  min="<?php echo date("Y-m-d");?>" value="<?php if(isset($_POST['date_start'])){echo $_POST['date_start'];} ?>" required>
 			  		</div>
 				</div>
 				<div class="grid-md-6">
                     <div class="form-group pd-10">
-						<label for="class_date_end">Nombre</label>
+						<label for="class_date_end">Fecha fin</label>
 						<input id="class_date_end" name="date_end" type="date"  placeholder="Fecha de Final" min="<?php echo date("Y-m-d");?>" value="<?php if(isset($_POST['date_end'])){echo $_POST['date_end'];} ?>" required>
 						<span class="error"><?php echo $dateMinComment;?></span>
 			  		</div>
