@@ -23,7 +23,8 @@
 						</tr>
 					</thead>
 					<tbody>
-						<?php foreach ($teachers as $teacher) { ?>
+						<?php 	if(!!$teachers){
+							foreach ($teachers as $teacher) { ?>
 						<tr>
 							<td><?php echo $teacher->name;?></td>
 							<td><?php echo $teacher->surname;?></td>
@@ -36,7 +37,8 @@
 								</a>
 							</td>
 						</tr>
-						<?php }?>
+						<?php }
+						}?>
 					</tbody>
 					<tfoot>
 						<tr>
@@ -57,7 +59,6 @@
 	    const table = document.querySelector('.datatable');
         table.addEventListener('click', e => {
         const { target } = e;
-		console.log(target);
         if (target.classList.contains('button-remove-teacher')) {
             var btn = target,
 				id = btn.getAttribute('data-id'),
