@@ -41,7 +41,6 @@ class ClasesModel{
 
     public function update(){
         try{
-            echo var_dump($this->course);
             $this->db->beginTransaction();
             $this->db->query('UPDATE class SET name=:name, color=:color, id_teacher=:id_teacher, id_course=:id_course, id_schedule=:id_schedule WHERE id_class=:id');
             $this->db->bind(':id', $this->course->id_class);
@@ -59,6 +58,7 @@ class ClasesModel{
             $this->db->bind(':day', $this->course->day);
             $this->db->execute();
             $this->db->commit();
+            return true;
         }catch(Exception $e){
             $this->db->rollBack();
             echo $e->getMessage();

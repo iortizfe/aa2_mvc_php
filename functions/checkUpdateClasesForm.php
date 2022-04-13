@@ -29,13 +29,12 @@
         $timeMinComment   = checkMinDateComment($data['time_start'], $data['time_end']);
         $dayComment       = checkBetweenDateComment($dates->date_start,$dates->date_end,$data['day']);
       }else{
-
-        echo var_dump($data);
           $db = new ClasesModel($data);
             $response = $db->update();
             if($response == true){
               global $success;
               $success = "Curso actualizado con exito";
+              header('Location: '.URLROOT.'controllers/admin/clases/');
             }
       }
     }

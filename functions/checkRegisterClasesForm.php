@@ -31,7 +31,7 @@
             if($response == true){
                 unset($_POST);
                 $_POST = array();
-                header('Location: '.URLROOT);
+                header('Location: '.URLROOT.'controllers/admin/clases/');
             }
       }
     }
