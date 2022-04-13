@@ -2,14 +2,19 @@
     <?php 
     $nameComment = $dayComment = $timeMinComment = "";
     $check;
-
+    $success ="";
+    if(isset($_GET['id'])){
+      $db = new ClasesModel(null);
+      $clase = $db->getClassByScheduleID($_GET['id']);
+    }else{
+      header('Location: '.URLROOT.'controllers/admin/clases/');
+    };
     function checkForm($data){
       global $check;
       $check = 3;
 
       $db1 = new CourseModel(null);
       $dates = $db1->getCourseDatesById($data['id_course']);
-
       $nameRegexp = "/^[a-zA-Z áéíóúàèòïüÁÀÉÈÍÓÒÚçÇñÑ]+$/";
        
       $check = checkField($data['name'],$nameRegexp);
@@ -27,11 +32,10 @@
 
         echo var_dump($data);
           $db = new ClasesModel($data);
-            $response = $db->register();
+            $response = $db->update();
             if($response == true){
-                unset($_POST);
-                $_POST = array();
-                header('Location: '.URLROOT);
+              global $success;
+              $success = "Curso actualizado con exito";
             }
       }
     }
@@ -42,8 +46,8 @@
             'color' => $_POST['color'],
             'id_teacher' => $_POST['id_teacher'],
             'id_course' => $_POST['id_course'],
-            'id_schedule' => null,
-            'id_class' => null,
+            'id_schedule' => $_POST['id_schedule'],
+            'id_class' => $_POST['id_class'],
             'time_start' => $_POST['time_start'],
             'time_end' => $_POST['time_end'],
             'day' => $_POST['day']

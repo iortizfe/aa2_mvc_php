@@ -4,7 +4,7 @@
 ?>
 <main class="o-register-page o-register-form">
 	<div class="w-content">
-		<h2 class="general-title tcenter">Cursos</h2>
+		<h2 class="general-title tcenter">Clases</h2>
 		<div class="grid-row">
 			<div class="grid-md-3">
 				<div class="pd-10"><a href="<?php echo URLROOT.'controllers/admin/teachers/insertar.php'?>" class="button">Añadir Profesores</a></div>
@@ -37,9 +37,8 @@
 							<td>
 								<a class="button-icon button-remove-clases las la-trash-alt" data-id="<?php echo $clase->id_class; ?>" data-name="<?php echo $clase->classname;?>">
 								</a>
-								<!--
-								<a class="button-icon las la-pen" href="<?php echo URLROOT.'controllers/admin/clases/modificar.php?id='.$clase->id_class;?>">
-								</a>-->
+								<a class="button-icon las la-pen" href="<?php echo URLROOT.'controllers/admin/clases/modificar.php?id='.$clase->id_schedule;?>">
+								</a>
 							</td>
 						</tr>
 						<?php }
@@ -63,18 +62,18 @@
 </main>
 
 <script>
-	    const table = document.querySelector('.datatable');
-        table.addEventListener('click', e => {
-        const { target } = e;
-        if (target.classList.contains('button-remove-clases')) {
-            var btn = target,
-				id = btn.getAttribute('data-id'),
-                message = '¿Seguro que quieres borrar a '+btn.getAttribute('data-name')+'?';
-				url = '<?php echo URLROOT ?>';
-                if(window.confirm(message)){
-                    location.href = url+'controllers/admin/clases/remove.php?id='+id;
-                }
-       	 	}
+	const table = document.querySelector('.datatable');
+	table.addEventListener('click', e => {
+	const { target } = e;
+	if (target.classList.contains('button-remove-clases')) {
+		var btn = target,
+			id = btn.getAttribute('data-id'),
+			message = '¿Seguro que quieres borrar a '+btn.getAttribute('data-name')+'?';
+			url = '<?php echo URLROOT ?>';
+			if(window.confirm(message)){
+				location.href = url+'controllers/admin/clases/remove.php?id='+id;
+			}
+		}
 	});
 </script>
 

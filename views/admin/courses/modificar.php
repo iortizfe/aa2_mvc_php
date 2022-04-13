@@ -6,7 +6,7 @@
 	<div class="w-content">
 		<div class="m-form">
 		  <div class="form-content">
-			<h2 class="general-title tcenter">Registro de courses</h2>
+			<h2 class="general-title tcenter">Modificación de courses</h2>
 			<h4 class="success tcenter"> <?php echo $success; ?></h4>
 			<form id="loginForm" name="loginForm" enctype="multipart/form-data"  method="post" action="<?php echo URLROOT.'controllers/admin/courses/modificar.php?id='.$_GET['id'];?>">
 			<div class="grid-row">

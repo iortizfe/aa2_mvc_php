@@ -21,17 +21,13 @@
         
       }else{
           $db = new CourseModel($data);
-          //if($db->classNotExist()){
+
             $response = $db->register();
             if($response == true){
                 unset($_POST);
                 $_POST = array();
                 header('Location: '.URLROOT.'controllers/admin/courses/');
             }
-          // }else{
-          //   global $emailComment;
-          //   $emailComment = "Ya estas registrado. Has utilizado anteriormente este email";
-          // }
       }
     }
     
