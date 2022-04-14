@@ -34,7 +34,7 @@
             if($response == true){
               global $success;
               $success = "Curso actualizado con exito";
-              header('Location: '.URLROOT.'controllers/admin/clases/');
+              //header('Location: '.URLROOT.'controllers/admin/clases/');
             }
       }
     }
