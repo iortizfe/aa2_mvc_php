@@ -52,11 +52,12 @@
 
 
     public function getCourseByID($id){
-      $this->db->query("SELECT * FROM courses WHERE id_course=:id");
+      $this->db->query("SELECT * FROM courses 
+                      WHERE id_course=:id");
       $this->db->bind(':id', $id);
-      $teacher = $this->db->single();
-      if($teacher){
-          return $teacher;
+      $course = $this->db->single();
+      if($course){
+          return $course;
       } else {
           return false;
       }

@@ -48,6 +48,7 @@
           if($response == true){
             global $success;
             $success = "Perfil actualizado con exito";
+            //header('Location: '.URLROOT.'controllers/admin/teachers/');
           }
       }
     }

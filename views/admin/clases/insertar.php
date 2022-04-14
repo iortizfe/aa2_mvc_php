@@ -28,7 +28,7 @@
 						<label for="class_teacher">Profesor</label>
                         <select id="class_teacher" name="id_teacher" class="select2">
                             <?php foreach ($teachers as $teacher) { ?>
-                                <option value="<?php echo $teacher->id_teacher; ?>" <?php if(isset($_POST['teacher']) && $_POST['teacher'] == $teacher->id_teacher){echo 'selected';} ?>><?php echo $teacher->name.' '.$teacher->surname;?></option>
+                                <option value="<?php echo $teacher->id_teacher; ?>" <?php if(isset($_POST['id_teacher']) && $_POST['id_teacher'] == $teacher->id_teacher){echo 'selected';} ?>><?php echo $teacher->name.' '.$teacher->surname;?></option>
                             <?php }?>
                         </select>
 					</div>
@@ -38,7 +38,7 @@
 						<label for="class_course">Curso</label>
                         <select id="class_course" name="id_course" class="select2">
                             <?php foreach ($courses as $course) { ?>
-                                <option value="<?php echo $course->id_course; ?>" <?php if(isset($_POST['course']) && $_POST['course'] == $course->id_course){echo 'selected';} ?>><?php echo $course->name;?></option>
+                                <option value="<?php echo $course->id_course; ?>" <?php if(isset($_POST['id_course']) && $_POST['id_course'] == $course->id_course){echo 'selected';} ?>><?php echo $course->name;?></option>
                             <?php }?>
                         </select>
 					</div>

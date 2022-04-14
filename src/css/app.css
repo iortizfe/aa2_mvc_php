@@ -1814,8 +1814,32 @@ header {
     display: block;
     top: 30px;
     right: 0;
-    background-color: #000000;
+    padding-top: 20px;
     z-index: 100;
+    min-width: 100%;
+  }
+  .menu .menu-primary .has-dropdown:hover .dropdown li {
+    background-color: #000000;
+  }
+  .menu .menu-primary .has-dropdown:hover .dropdown li:first-of-type {
+    position: relative;
+  }
+  .menu .menu-primary .has-dropdown:hover .dropdown li:first-of-type::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid black;
+  }
+  .menu .menu-primary .has-dropdown:hover .dropdown li a {
+    font-size: 0.75em;
   }
   .menu .menu-primary .has-dropdown .dropdown {
     display: none;

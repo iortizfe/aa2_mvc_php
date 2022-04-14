@@ -39,10 +39,36 @@ class ClasesModel{
         }
     }
 
+    public function update(){
+        try{
+            $this->db->beginTransaction();
+            $this->db->query('UPDATE class SET name=:name, color=:color, id_teacher=:id_teacher, id_course=:id_course, id_schedule=:id_schedule WHERE id_class=:id');
+            $this->db->bind(':id', $this->course->id_class);
+            $this->db->bind(':name', $this->course->name);
+            $this->db->bind(':color', $this->course->color);
+            $this->db->bind(':id_teacher', intval($this->course->id_teacher));
+            $this->db->bind(':id_course', intval($this->course->id_course));
+            $this->db->bind(':id_schedule', $this->course->id_schedule);
+            $this->db->execute();
+            
+            $this->db->query('UPDATE schedule SET time_start=:time_start, time_end=:time_end, day=:day WHERE id_schedule=:id_schedule');
+            $this->db->bind(':id_schedule', $this->course->id_schedule);
+            $this->db->bind(':time_start', $this->course->time_start);
+            $this->db->bind(':time_end', $this->course->time_end);
+            $this->db->bind(':day', $this->course->day);
+            $this->db->execute();
+            $this->db->commit();
+            return true;
+        }catch(Exception $e){
+            $this->db->rollBack();
+            echo $e->getMessage();
+        }
+    }
+
     public function getAll(){
         $this->db->query("SELECT co.name AS cursename, ca.name AS classname, t.name AS tname, t.surname AS tsurname, 
                                  sc.day AS day, sc.time_start AS time_start, sc.time_end AS time_end,ca.id_class AS id_class,
-                                 co.id_course AS id_course, t.id_teacher AS id_teacher
+                                 co.id_course AS id_course, t.id_teacher AS id_teacher, sc.id_schedule AS id_schedule
                           FROM courses AS co
                           INNER JOIN class AS ca
                           ON co.id_course=ca.id_course
@@ -53,6 +79,45 @@ class ClasesModel{
         $courses = $this->db->all();
         if($courses){
             return $courses;
+        } else {
+            return false;
+        }
+      }
+
+
+
+      public function getClassByID($id){
+        $this->db->query("SELECT * FROM class WHERE id_class=:id");
+        $this->db->bind(':id', $id);
+        $class = $this->db->single();
+        if($class){
+            return $class;
+        } else {
+            return false;
+        }
+      }
+
+      public function getClassByScheduleID($id){
+        $this->db->query("SELECT * FROM class AS c
+                                   LEFT JOIN schedule AS s
+                                   ON c.id_schedule=s.id_schedule 
+                                   WHERE c.id_schedule=:id");
+        $this->db->bind(':id', $id);
+        $course = $this->db->single();
+        if($course){
+            return $course;
+        } else {
+            return false;
+        }
+      }
+  
+      
+
+      public function delete($id){
+        $this->db->query("DELETE FROM class WHERE id_class=:id");
+        $this->db->bind(':id', $id);
+        if($this->db->execute()){
+            return true;
         } else {
             return false;
         }

@@ -33,6 +33,10 @@
         if($response == true){
           global $success;
           $success = "Curso actualizado con exito";
+          $db = new CourseModel(null);
+          global $course;
+          $course = $db->getCourseByID($_GET['id']);
+          //header('Location: '.URLROOT.'controllers/admin/courses/');
         }
       }
     }

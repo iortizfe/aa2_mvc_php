@@ -71,12 +71,40 @@ header{
                 position: relative;
                 &:hover{
                     .dropdown{
+
+                        li{
+                            background-color:#000000; 
+                            
+                            &:first-of-type{
+                                position: relative;
+
+                                &::after{
+                                    content: '';
+                                    display: inline-block;
+                                    position: absolute;
+                                    top: -9px;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    width: 0; 
+                                    height: 0; 
+                                    border-left: 9px solid transparent;
+                                    border-right: 9px solid transparent;
+                                    border-bottom: 9px solid black;
+                                }
+                            }
+                            a{
+                                font-size: 0.75em;
+                            }
+
+
+                        }
                         position: absolute;
                         display: block;
                         top: 30px;
                         right: 0;
-                        background-color:#000000;
+                        padding-top: 20px;
                         z-index: 100;
+                        min-width: 100%;
                     } 
                 }
                 .dropdown{

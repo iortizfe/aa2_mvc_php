@@ -22,7 +22,9 @@
 						</tr>
 					</thead>
 					<tbody>
-						<?php foreach ($courses as $course) { ?>
+						<?php 
+							if(!!$courses){
+								foreach ($courses as $course) { ?>
 						<tr>
 							<td><?php echo $course->name;?></td>
 							<td><?php echo $course->date_start;?></td>
@@ -35,7 +37,9 @@
 								</a>
 							</td>
 						</tr>
-						<?php }?>
+						<?php }
+							}
+						?>
 					</tbody>
 					<tfoot>
 						<tr>
@@ -55,8 +59,7 @@
 <script>
 	    const table = document.querySelector('.datatable');
         table.addEventListener('click', e => {
-        const { target } = e;
-		console.log(target);
+        const { target } = e;as
         if (target.classList.contains('button-remove-course')) {
             var btn = target,
 				id = btn.getAttribute('data-id'),
