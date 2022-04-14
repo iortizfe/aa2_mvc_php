@@ -25,7 +25,7 @@
 					</thead>
 					<tbody>
 						<?php 
-						if(!!$clases){
+						if(isset($clases)){
 
 						foreach ($clases as $clase) { ?>
 						<tr>

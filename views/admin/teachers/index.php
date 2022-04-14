@@ -23,7 +23,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<?php 	if(!!$teachers){
+						<?php 	if(isset($teachers)){
 							foreach ($teachers as $teacher) { ?>
 						<tr>
 							<td><?php echo $teacher->name;?></td>

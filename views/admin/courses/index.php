@@ -23,7 +23,7 @@
 					</thead>
 					<tbody>
 						<?php 
-							if(!!$courses){
+							if(isset($courses)){
 								foreach ($courses as $course) { ?>
 						<tr>
 							<td><?php echo $course->name;?></td>
