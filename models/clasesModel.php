@@ -84,6 +84,31 @@ class ClasesModel{
         }
       }
 
+      public function getAllByStudentID($id){
+        $this->db->query("SELECT co.name AS cursename, ca.name AS classname, t.name AS tname, t.surname AS tsurname, 
+                                 sc.day AS day, sc.time_start AS time_start, sc.time_end AS time_end,ca.id_class AS id_class,
+                                 co.id_course AS id_course, t.id_teacher AS id_teacher, sc.id_schedule AS id_schedule
+                          FROM courses AS co
+                          INNER JOIN class AS ca
+                          ON co.id_course=ca.id_course
+                          INNER JOIN teachers AS t
+                          ON ca.id_teacher=t.id_teacher
+                          INNER JOIN schedule AS sc
+                          ON ca.id_schedule=sc.id_schedule
+                          JOIN enrollment AS en
+                          ON co.id_course=en.id_course
+                          WHERE enrollment.id_student=:id
+                          
+                          ");
+        $this->db->bind(':id', $this->course->id_class);
+        $courses = $this->db->all();
+        if($courses){
+            return $courses;
+        } else {
+            return false;
+        }
+      }
+
 
 
       public function getClassByID($id){
