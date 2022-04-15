@@ -1,5 +1,5 @@
 <?php
-if (!isset($_SESSION['user']) && ($route_type != "public")) {
+if (!isset($_SESSION['user']) && ($route_type != "public" || $route_type!="all") ) {
     header('Location: '.URLROOT.'controllers/login.php');
 }else if(isset($_SESSION['user']) && $route_type == "public") {
     header('Location: '.URLROOT);
