@@ -1,6 +1,6 @@
 <?php
  session_start();
- $route_type = 'not-private';
+ $route_type = 'public';
  include '../config/config.php';
  include '../libraries/MiddlewareRoute.php';
  include '../libraries/Database.php';

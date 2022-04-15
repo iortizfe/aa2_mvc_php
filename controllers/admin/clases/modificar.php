@@ -1,6 +1,7 @@
 <?php
  session_start();
  $route_type = 'admin';
+ echo var_dump((isset($_SESSION['user']) && $_SESSION['role'] != 'admin' && $route_type == "admin"))
  include '../../../config/config.php'; 
  include '../../../libraries/MiddlewareRoute.php';
  include '../../../libraries/Database.php';  

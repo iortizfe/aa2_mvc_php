@@ -1,6 +1,6 @@
 <?php
  session_start();
- $route_type = 'public';
+ $route_type = 'all';
  include './config/config.php'; 
  include './libraries/MiddlewareRoute.php';
  include './views/partials/head.php'; 
