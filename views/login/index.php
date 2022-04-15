@@ -19,7 +19,7 @@
 			  <button id="login_submit" type="submit" class="mgt-10 mgb-10 button w100">Acceder</button>
 			</form>
 		  </div>
-		  <div class="card-footer text-muted">
+		  <div class="">
 			<span>No tengo cuenta</span>
 			<a href="<?php echo URLROOT . 'controllers/register/' ?>" class="btn btn-outline-secondary w-full">Registrarme</a>
 		  </div>

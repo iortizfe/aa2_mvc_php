@@ -43,7 +43,7 @@
 			  <button id="login_submit" type="submit" class="mgt-10 mgb-10 button w100">Registrate</button>
 			</form>
 		  </div>
-		  <div class="card-footer text-muted">
+		  <div class="">
 			<span>Ya tengo cuenta</span>
 			<a href="<?php echo URLROOT . 'controllers/login.php' ?>" class="btn btn-outline-secondary w-full">Acceder</a>
 		  </div>
