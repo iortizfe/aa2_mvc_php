@@ -65,17 +65,10 @@
 
     public function getAllCoursesByStudentID($id){
       $this->db->query("SELECT * 
-                        FROM courses AS c
-                        LEFT JOIN enrollment AS e
-                        ON c.id_course=e.id_course
-                        WHERE e.id_student!=:id
-                        UNION
-                        SELECT * 
-                        FROM courses AS c
-                        RIGHT JOIN enrollment AS e
-                        ON c.id_course=e.id_course
-                        WHERE e.id_student=:id");
-                        //GROUP BY courses.id_course
+                        FROM enrollment AS e
+                        RIGHT JOIN courses AS c
+                        ON e.id_course=c.id_course
+                        AND e.id_student=:id");
       $this->db->bind(':id', $id);
       $courses = $this->db->all();
       if($courses){

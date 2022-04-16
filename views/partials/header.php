@@ -48,6 +48,18 @@
                             </li>
                         <?php } elseif($_SESSION['role'] == 'student') { ?>
                             <li class="has-dropdown">
+                                <span class="dropdown-button">Mi aprendizaje</span>
+                                <ul class="dropdown">
+                                    <li>
+                                        <a href="<?php echo URLROOT.'controllers/student/' ?>">Mis clases</a>
+                                    </li>
+                                    <li>
+                                        <a href="<?php echo URLROOT.'controllers/student/miscursos.php' ?>">Mis cursos</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="has-dropdown">
                                 <span class="dropdown-button">Mi perfil</span>
                                 <ul class="dropdown">
                                     <li>
