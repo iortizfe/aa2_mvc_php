@@ -67,17 +67,27 @@
 			message = '¿Seguro que quieres apuntarte a '+btn.getAttribute('data-course')+'?';
 			url = '<?php echo URLROOT ?>';
 			if(window.confirm(message)){
-				location.href = url+'controllers/admin/clases/addCourse.php?id='+id;
+				location.href = url+'controllers/admin/student/courses/addstudenttocourse.php?id='+id;
 			}
 		}
 
-    if (target.classList.contains('button-add-student-course')) {
+    if (target.classList.contains('button-on-student-course')) {
 		var btn = target,
 			id = btn.getAttribute('data-id'),
-			message = '¿Seguro que quieres apuntarte a '+btn.getAttribute('data-course')+'?';
+			message = '¿Seguro que quieres darte activar a '+btn.getAttribute('data-course')+'?';
 			url = '<?php echo URLROOT ?>';
 			if(window.confirm(message)){
-				location.href = url+'controllers/admin/clases/addCourse.php?id='+id;
+				location.href = url+'controllers/admin/clases/changestudenttocoursestate.php?id='+id+'&state=1';
+			}
+		}
+
+        if (target.classList.contains('button-off-student-course')) {
+		var btn = target,
+			id = btn.getAttribute('data-id'),
+			message = '¿Seguro que quieres darte de baja de '+btn.getAttribute('data-course')+'?';
+			url = '<?php echo URLROOT ?>';
+			if(window.confirm(message)){
+				location.href = url+'controllers/admin/clases/changestudenttocoursestate.php?id='+id+'&state=0';
 			}
 		}
 	});

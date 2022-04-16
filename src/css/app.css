@@ -168,6 +168,15 @@ a {
   text-decoration: none;
   display: block;
 }
+.button.green {
+  background-color: #05A061;
+}
+.button.red {
+  background-color: #A01105;
+}
+.button.oragne {
+  background-color: #A08135;
+}
 
 .button-icon {
   font-size: 20px;
