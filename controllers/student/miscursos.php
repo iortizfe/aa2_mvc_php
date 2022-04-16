@@ -6,6 +6,6 @@
  include '../../libraries/Database.php';  
  include '../../class/CourseClass.php'; 
  include '../../models/coursesModel.php';  
- include '../../functions/getAllListCoursesByStudent.php';  
+ include '../../functions/getAllListCoursesByStudent.php'; 
  include '../../views/partials/head.php'; 
- include '../../views/student/index.php'; 
+ include '../../views/student/miscursos.php'; 
