@@ -5,4 +5,4 @@
  include '../../../libraries/MiddlewareRoute.php';
  include '../../../libraries/Database.php'; 
  include '../../../models/coursesModel.php';  
- include '../../../functions/addStudentToCourse.php'; 
+ include '../../../functions/changeStudentCourse.php'; 

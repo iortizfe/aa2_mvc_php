@@ -12,7 +12,6 @@
      $this->db->bind(':email', $email);
      $row = $this->db->single();
      if($row != ""){
-      //  echo var_dump($row);
        if(password_verify($password, $row->pass)){
         $_SESSION['user'] = $row->id; 
         $_SESSION['role'] = 'student';

@@ -63,6 +63,37 @@
       }
     }
 
+    public function enrollStudent($data){
+      $this->db->query("INSERT INTO enrollment(id_course, id_student, status) VALUES(:id_course, :id_student, :status)");
+      $this->db->bind(':id_course', $data['id_course']);
+      $this->db->bind(':id_student', $data['id_student']);
+      $this->db->bind(':status', $data['status']);
+
+      // Execute
+        if($this->db->execute()){
+          return true;
+        } else {
+            $this->db->error();
+        }
+    }
+
+    public function updateEnrollment($data){
+      try{
+        $this->db->query('UPDATE enrollment SET status=:status WHERE id_enrollment=:id_enrollment');
+        $this->db->bind(':id_enrollment', intval($data['id_enrollment']));
+        $this->db->bind(':status', intval($data['status']));
+  
+        // Execute
+        if($this->db->execute()){
+          return true;
+        } else {
+          return $this->db->error();
+        }
+      }catch(Exception $e){
+        echo $e->getMessage();
+      }
+    }
+
     public function getAllCoursesByStudentID($id){
       $this->db->query("SELECT * 
                         FROM enrollment AS e

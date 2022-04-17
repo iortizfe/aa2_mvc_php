@@ -2,7 +2,7 @@
 
     if(isset($_GET['id'])){
         $db_clases = new CourseModel(null);
-        $data = array('course_id'=> $_GET['id'], 'student_id'=> $_SESSION['user'], 'active'=> $_GET['state']);
+        $data = array('id_enrollment'=> $_GET['id'], 'status'=> $_GET['state']);
         $response = $db_clases->updateEnrollment($data);
     };
 
