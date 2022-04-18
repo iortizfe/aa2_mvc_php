@@ -3,11 +3,11 @@
   define('DB_HOST', 'localhost');
   define('DB_USER', 'root');
   define('DB_PASS', '');
-  define('DB_NAME', 'aula_mvc3');
+  define('DB_NAME', 'wordpress21');
 	
   // VARIABLES ROOT 
   define('APPROOT', dirname( dirname(__FILE__)));
-  define('URLROOT', 'http://localhost/aa2_mvc_php');
+  define('URLROOT', 'http://localhost:8080/aa2_mvc_php-calendar_2/');
 
   // VARIABLES NOMBRE
   define('APPNAME', 'AULA MVC3 P2');
