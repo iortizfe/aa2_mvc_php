@@ -8,6 +8,7 @@
 			<div class="grid-md-3">
 				<div class="pd-10"><a href="<?php echo URLROOT.'controllers/student/miscursos.php'?>" class="button">Mis cursos</a></div>
 			</div>
+			
 			<div class="grid-md-9 pd-20">
 			 	
 			</div>

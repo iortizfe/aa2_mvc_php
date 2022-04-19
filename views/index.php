@@ -54,7 +54,7 @@
         </div>
         <div class="content">
             <h2>¿Cómo funciona?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam neque nunc, tempor in arcu ut, fermentum tempus lorem. Aenean eget ullamcorper tellus. Vivamus aliquet pellentesque justo nec bibendum. Integer auctor venenatis nisl, ut rutrum turpis consequat et. Proin ac egestas elit, mattis elementum nisi. Pellentesque quis nisl quam. In euismod lorem eu augue vulputate, eu vestibulum diam cursus. Cras volutpat ex quis euismod condimentum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi feugiat nunc ut iaculis auctor. Sed sem est, porta quis lectus fermentum, commodo egestas urna. Aenean dignissim, leo non efficitur egestas, velit nibh vulputate justo, a lacinia nulla elit ut nisl. Quisque eleifend tellus quis erat rutrum egestas.</p>
+            <p>Elige tu curso. Matricúlate de las asignaturas que creas adecuadas según tu carga horario y consulta el horario generado</p>
         </div>
     </div>
 </section>
