@@ -33,6 +33,7 @@ class ClasesModel{
             $this->db->bind(':day', $this->course->day);
             $this->db->execute();
             $this->db->commit();
+            return true;
         }catch(Exception $e){
             $this->db->rollBack();
             echo $e->getMessage();

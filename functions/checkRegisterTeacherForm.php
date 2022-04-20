@@ -4,7 +4,7 @@
     $nifComment = $telefonoComment = $emailComment = $nameComment = $surnameComment = "";
     $nifClass = $telefonoClass = $emailClass = $nameClass = $surnameClass = "";
     $check;
-
+    $success = "";
     function checkForm($data){
       global $check;
       $check = count($data);
@@ -38,7 +38,11 @@
           if($db->teacherNotExist()){
             $response = $db->register();
             if($response == true){
-                header('Location: '.URLROOT.'controllers/admin/teachers/');
+                unset($_POST);
+                $_POST = array();
+                global $success;
+                $success = "El profesor se ha insertado con exito";
+                //header('Location: '.URLROOT.'controllers/admin/teachers/');
             }
           }else{
             global $emailComment;

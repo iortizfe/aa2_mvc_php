@@ -168,6 +168,22 @@ a {
   text-decoration: none;
   display: block;
 }
+<<<<<<< Updated upstream
+=======
+.button:hover, .button:active {
+  color: white;
+  opacity: 0.8;
+}
+.button.green {
+  background-color: #05A061;
+}
+.button.red {
+  background-color: #A01105;
+}
+.button.orange {
+  background-color: #A08135;
+}
+>>>>>>> Stashed changes
 
 .button-icon {
   font-size: 20px;

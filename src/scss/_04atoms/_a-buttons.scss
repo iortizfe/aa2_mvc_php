@@ -5,6 +5,27 @@
     border-radius: 10px;
     text-decoration: none;
     display: block;
+<<<<<<< Updated upstream
+=======
+
+    &:hover,
+    &:active{
+        color: white;
+        opacity: 0.8;
+    }
+
+    &.green{
+        background-color: #05A061;
+    }
+
+    &.red{
+        background-color: #A01105;
+    }
+
+    &.orange{
+        background-color: #A08135;
+    }
+>>>>>>> Stashed changes
 }
 
 .button-icon{

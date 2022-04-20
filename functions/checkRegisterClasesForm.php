@@ -2,7 +2,7 @@
     <?php 
     $nameComment = $dayComment = $timeMinComment = "";
     $check;
-
+    $success ="";
     function checkForm($data){
       global $check;
       $check = 3;
@@ -31,7 +31,9 @@
             if($response == true){
                 unset($_POST);
                 $_POST = array();
-                header('Location: '.URLROOT.'controllers/admin/clases/');
+                global $success;
+                $success = "Clase insertada con exito";
+                //header('Location: '.URLROOT.'controllers/admin/clases/');
             }
       }
     }

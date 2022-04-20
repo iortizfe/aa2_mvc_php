@@ -7,6 +7,7 @@
 		<div class="m-form">
 		  <div class="form-content">
 			<h2 class="general-title">Registro de teachers</h2>
+			<h4 class="success tcenter"> <?php echo $success; ?></h4>
 			<form id="loginForm" name="loginForm" enctype="multipart/form-data"  method="post" action="<?php echo URLROOT.'controllers/admin/teachers/insertar.php'?>">
 			<div class="grid-row">
 				<div class="grid-md-6">
