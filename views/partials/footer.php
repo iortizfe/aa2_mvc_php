@@ -15,11 +15,15 @@
     <script src="https://cdn.jsdelivr.net/npm/moment/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/locales/es.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.0/locales-all.min.js"></script>
+    
     <!--
     <script src="<?php echo URLROOT.'src/js/fullcalendar/main.min.js' ?>"></script>
     <script src="<?php echo URLROOT.'src/js/fullcalendar/es.js' ?>"></script>
     -->
-    <script src="<?php echo URLROOT.'src/js/calendario.js' ?>"></script>
-    <script type="text/javascript" src="<?php echo URLROOT.'src/js/app.js' ?>"></script>
+
+    <!-- <script src="<?php echo URLROOT.'src/js/calendario.js' ?>"></script> -->
+    
+
 </body>
 </html>

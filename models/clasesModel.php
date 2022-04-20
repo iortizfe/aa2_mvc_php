@@ -99,7 +99,8 @@ class ClasesModel{
                           WHERE en.id_student=:id
                           
                           ");
-        $this->db->bind(':id', $this->course->id_class);
+        $this->db->bind(':id', $id);
+        
         $courses = $this->db->all();
         if($courses){
             return $courses;
