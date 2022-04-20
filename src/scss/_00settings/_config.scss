@@ -1,16 +1,17 @@
+//Configuraciones
+@import url("//hello.myfonts.net/count/34672d");
+
 //VARIABLES
 
-$OpenSans: 'Open Sans', Arial, Helvetica, Sans-serif;
+$muli: 'Mulish', sans-serif;
 
 $default-browser-font-size: 16px !global;
 
-$primary-color: #1F2463;
-$secondary-color: #D38035;
+$primary-color: #0561A0;
 $black:#000000;
 $grey: #7f7f7f;
 $white: #FFFFFF;
 
-$selects-grey: #dfdfdf;
 
 $img-path: '../img/';
 $large-wrap: 1170px;
@@ -22,5 +23,3 @@ $breakpoints: (
   large: 1024px,
   xlarge: 1400px
 );
-
-$wrapper-size: 1100px;
