@@ -15,7 +15,7 @@
       global $check;
       $check = 2;
 
-      $nameRegexp = "/^[a-zA-Z áéíóúàèòïüÁÀÉÈÍÓÒÚçÇñÑ]+$/";
+      $nameRegexp = "/^[a-zA-Z áéíóúàèòïüÁÀÉÈÍÓÒÚçÇñÑ 0-9]+$/";
        
       $check = checkField($data['name'],$nameRegexp);
       $check = checkMinDate($data['date_start'], $data['date_end']);
@@ -32,7 +32,7 @@
         $response = $db->update($data['id']);
         if($response == true){
           global $success;
-          $success = "Curso actualizado con exito";
+          $success = "Curso actualizado con éxito";
           $db = new CourseModel(null);
           global $course;
           $course = $db->getCourseByID($_GET['id']);

@@ -9,7 +9,7 @@
       global $check;
       $check = count($data);
 
-      $nameRegexp = "/^[a-zA-Z áéíóúàèòïüÁÀÉÈÍÓÒÚçÇñÑ]+$/";
+      $nameRegexp = "/^[a-zA-Z áéíóúàèòïüÁÀÉÈÍÓÒÚçÇñÑ 0-9]+$/";
       $nifRegexp = "/^(\d{8}[a-zA-ZñÑ])$/";
       $telefonoRegexp = "/^([679]{1}\d{8})$/";
        
@@ -41,7 +41,7 @@
                 unset($_POST);
                 $_POST = array();
                 global $success;
-                $success = "El profesor se ha insertado con exito";
+                $success = "El profesor se ha insertado con éxito";
                 //header('Location: '.URLROOT.'controllers/admin/teachers/');
             }
           }else{

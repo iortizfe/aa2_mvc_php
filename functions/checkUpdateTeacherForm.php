@@ -18,7 +18,7 @@
       global $check;
       $check = count($data) - 1;
 
-      $nameRegexp = "/^[a-zA-Z áéíóúàèòïüÁÀÉÈÍÓÒÚçÇñÑ]+$/";
+      $nameRegexp = "/^[a-zA-Z áéíóúàèòïüÁÀÉÈÍÓÒÚçÇñÑ 0-9]+$/";
       $nifRegexp = "/^(\d{8}[a-zA-ZñÑ])$/";
       $telefonoRegexp = "/^([679]{1}\d{8})$/";
        
@@ -47,7 +47,7 @@
           $response = $db->update($data['id']);
           if($response == true){
             global $success;
-            $success = "Perfil actualizado con exito";
+            $success = "Perfil actualizado con éxito";
             //header('Location: '.URLROOT.'controllers/admin/teachers/');
           }
       }

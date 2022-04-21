@@ -14,7 +14,7 @@
       global $oldpass;
       $check = 5;
 
-      $nameRegexp = "/^[a-zA-Z áéíóúàèòïüÁÀÉÈÍÓÒÚçÇñÑ]+$/";
+      $nameRegexp = "/^[a-zA-Z áéíóúàèòïüÁÀÉÈÍÓÒÚçÇñÑ 0-9]+$/";
        
       $check = checkField($data['username'],$nameRegexp);
       $check = checkEmail($data['email']);
@@ -45,7 +45,7 @@
           global $success;
           $db = new LoginModel();
           $user = $db->getMe();
-          $success = "Perfil actualizado con exito";
+          $success = "Perfil actualizado con éxito";
           unset($_POST);
         }
       }

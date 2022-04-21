@@ -9,7 +9,7 @@
       global $check;
       $check = count($data) - 1;
 
-      $nameRegexp = "/^[a-zA-Z áéíóúàèòïüÁÀÉÈÍÓÒÚçÇñÑ]+$/";
+      $nameRegexp = "/^[a-zA-Z áéíóúàèòïüÁÀÉÈÍÓÒÚçÇñÑ 0-9]+$/";
        
       $check = checkField($data['username'],$nameRegexp);
       $check = checkEmail($data['email']);

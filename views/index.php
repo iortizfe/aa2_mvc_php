@@ -54,7 +54,12 @@
         </div>
         <div class="content">
             <h2>¿Cómo funciona?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam neque nunc, tempor in arcu ut, fermentum tempus lorem. Aenean eget ullamcorper tellus. Vivamus aliquet pellentesque justo nec bibendum. Integer auctor venenatis nisl, ut rutrum turpis consequat et. Proin ac egestas elit, mattis elementum nisi. Pellentesque quis nisl quam. In euismod lorem eu augue vulputate, eu vestibulum diam cursus. Cras volutpat ex quis euismod condimentum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi feugiat nunc ut iaculis auctor. Sed sem est, porta quis lectus fermentum, commodo egestas urna. Aenean dignissim, leo non efficitur egestas, velit nibh vulputate justo, a lacinia nulla elit ut nisl. Quisque eleifend tellus quis erat rutrum egestas.</p>
+            <p>Si eres estudiante esta apliación te servirá para saber tu horario de las asignaturas matriculadas.
+
+            </p>
+            <p>
+              Como gestor de la aplicación puedes dar de alta profesores, cursos, horarios...
+           </p>
         </div>
     </div>
 </section>

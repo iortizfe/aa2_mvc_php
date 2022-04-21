@@ -7,7 +7,7 @@
       global $check;
       $check = 2;
 
-      $nameRegexp = "/^[a-zA-Z áéíóúàèòïüÁÀÉÈÍÓÒÚçÇñÑ]+$/";
+      $nameRegexp = "/^[a-zA-Z áéíóúàèòïüÁÀÉÈÍÓÒÚçÇñÑ 0-9]+$/";
        
       $check = checkField($data['name'],$nameRegexp);
       $check = checkMinDate($data['date_start'], $data['date_end']);
@@ -27,7 +27,7 @@
                 unset($_POST);
                 $_POST = array();
                 global $success;
-                $success = "Curso insertado con exito";
+                $success = "Curso insertado con éxito";
                 //header('Location: '.URLROOT.'controllers/admin/courses/');
             }
       }

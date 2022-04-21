@@ -14,7 +14,7 @@
       global $oldpass;
       $check = 8;
 
-      $nameRegexp = "/^[a-zA-Z áéíóúàèòïüÁÀÉÈÍÓÒÚçÇñÑ]+$/";
+      $nameRegexp = "/^[a-zA-Z áéíóúàèòïüÁÀÉÈÍÓÒÚçÇñÑ 0-9]+$/";
       $nifRegexp = "/^(\d{8}[a-zA-ZñÑ])$/";
       $telefonoRegexp = "/^([679]{1}\d{8})$/";
        
@@ -56,7 +56,7 @@
           global $success;
           $db = new LoginModel();
           $user = $db->getMe();
-          $success = "Perfil actualizado con exito";
+          $success = "Perfil actualizado con éxito";
           unset($_POST);
         }
       }

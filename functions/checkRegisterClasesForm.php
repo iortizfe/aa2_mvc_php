@@ -10,7 +10,7 @@
       $db1 = new CourseModel(null);
       $dates = $db1->getCourseDatesById($data['id_course']);
 
-      $nameRegexp = "/^[a-zA-Z áéíóúàèòïüÁÀÉÈÍÓÒÚçÇñÑ]+$/";
+      $nameRegexp = "/^[a-zA-Z áéíóúàèòïüÁÀÉÈÍÓÒÚçÇñÑ 0-9]+$/";
        
       $check = checkField($data['name'],$nameRegexp);
       $check = checkMinDate($data['time_start'], $data['time_end']);
@@ -30,7 +30,7 @@
                 unset($_POST);
                 $_POST = array();
                 global $success;
-                $success = "Clase insertada con exito";
+                $success = "Clase insertada con éxito";
                 //header('Location: '.URLROOT.'controllers/admin/clases/');
             }
       }
