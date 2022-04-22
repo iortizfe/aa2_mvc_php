@@ -59,7 +59,7 @@
 <script>
 	    const table = document.querySelector('.datatable');
         table.addEventListener('click', e => {
-        const { target } = e;as
+        const { target } = e;
         if (target.classList.contains('button-remove-course')) {
             var btn = target,
 				id = btn.getAttribute('data-id'),
